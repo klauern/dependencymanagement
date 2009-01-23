@@ -7,8 +7,8 @@ class Vendor {
     Date lastUpdated
     static mapping = {
         autoTimestamp true
-        columns = {
-            id column: vendor_id
+        columns {
+            id column: 'vendor_id'
         }
     }
 }

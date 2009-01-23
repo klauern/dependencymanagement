@@ -14,7 +14,7 @@ environments {
 	development {
 		dataSource {
             pooled = false
-			dbCreate = "create" // one of 'create', 'create-drop','update'
+			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
             driverClassName = "org.apache.derby.jdbc.ClientDriver"
             username = ""
             password = ""

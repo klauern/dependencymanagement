@@ -8,7 +8,7 @@ class Zone {
     static mapping = {
         autoTimestamp true
         columns {
-            id column: "zone_id"
+            id column: 'zone_id'
         }
         id generator:'sequence', params:[sequence:'zone_id']
     }

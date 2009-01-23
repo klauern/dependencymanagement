@@ -6,8 +6,8 @@ class Event {
     Date lastUpdated
     static mapping = {
         autoTimestamp true
-        columns = {
-            id column: event_id
+        columns {
+            id column: 'event_id'
         }
     }
 }

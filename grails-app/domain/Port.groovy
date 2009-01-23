@@ -7,5 +7,8 @@ class Port {
     Date lastUpdated
     static mapping = {
         autoTimestamp true
+        columns {
+            id column: 'port_id'
+        }
     }
 }
