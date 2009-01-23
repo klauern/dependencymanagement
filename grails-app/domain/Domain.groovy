@@ -7,4 +7,5 @@ class Domain {
     static mapping = {
         autoTimestamp true
     }
+    static hasMany = [ports:Port]
 }

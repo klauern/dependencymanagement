@@ -39,6 +39,22 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="domains">Domains:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'domains','errors')}">
+                                    
+<ul>
+<g:each var="d" in="${zoneInstance?.domains?}">
+    <li><g:link controller="domain" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="domain" params="['zone.id':zoneInstance?.id]" action="create">Add Domain</g:link>
+
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="lastUpdated">Last Updated:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'lastUpdated','errors')}">

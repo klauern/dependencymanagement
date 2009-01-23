@@ -7,5 +7,10 @@ class Zone {
     // column 'id' is inferred and created by default.
     static mapping = {
         autoTimestamp true
+        columns {
+            id column: "zone_id"
+        }
+        id generator:'sequence', params:[sequence:'zone_id']
     }
+    static hasMany = [domains:Domain]
 }

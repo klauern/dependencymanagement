@@ -58,6 +58,19 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Ports:</td>
+                            
+                            <td  valign="top" style="text-align:left;" class="value">
+                                <ul>
+                                <g:each var="p" in="${domainInstance.ports}">
+                                    <li><g:link controller="port" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Zone:</td>
                             
                             <td valign="top" class="value"><g:link controller="zone" action="show" id="${domainInstance?.zone?.id}">${domainInstance?.zone?.encodeAsHTML()}</g:link></td>

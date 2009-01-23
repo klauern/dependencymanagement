@@ -66,6 +66,22 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="ports">Ports:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'ports','errors')}">
+                                    
+<ul>
+<g:each var="p" in="${domainInstance?.ports?}">
+    <li><g:link controller="port" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="port" params="['domain.id':domainInstance?.id]" action="create">Add Port</g:link>
+
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="zone">Zone:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'zone','errors')}">

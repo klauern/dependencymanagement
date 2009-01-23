@@ -29,6 +29,40 @@
                             
                         </tr>
                     
+                        <tr class="prop">
+                            <td valign="top" class="name">Destination:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="vendor" action="show" id="${integrationInstance?.destination?.id}">${integrationInstance?.destination?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Details:</td>
+                            
+                            <td  valign="top" style="text-align:left;" class="value">
+                                <ul>
+                                <g:each var="d" in="${integrationInstance.details}">
+                                    <li><g:link controller="intDetail" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Event:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="event" action="show" id="${integrationInstance?.event?.id}">${integrationInstance?.event?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Source:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="vendor" action="show" id="${integrationInstance?.source?.id}">${integrationInstance?.source?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
                     </tbody>
                 </table>
             </div>

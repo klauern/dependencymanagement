@@ -28,6 +28,49 @@
                     <table>
                         <tbody>
                         
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="destination">Destination:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'destination','errors')}">
+                                    <g:select optionKey="id" from="${Vendor.list()}" name="destination.id" value="${integrationInstance?.destination?.id}" ></g:select>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="details">Details:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'details','errors')}">
+                                    
+<ul>
+<g:each var="d" in="${integrationInstance?.details?}">
+    <li><g:link controller="intDetail" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="intDetail" params="['integration.id':integrationInstance?.id]" action="create">Add IntDetail</g:link>
+
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="event">Event:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'event','errors')}">
+                                    <g:select optionKey="id" from="${Event.list()}" name="event.id" value="${integrationInstance?.event?.id}" ></g:select>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="source">Source:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'source','errors')}">
+                                    <g:select optionKey="id" from="${Vendor.list()}" name="source.id" value="${integrationInstance?.source?.id}" ></g:select>
+                                </td>
+                            </tr> 
+                        
                         </tbody>
                     </table>
                 </div>

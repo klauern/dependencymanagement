@@ -37,6 +37,19 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Domains:</td>
+                            
+                            <td  valign="top" style="text-align:left;" class="value">
+                                <ul>
+                                <g:each var="d" in="${zoneInstance.domains}">
+                                    <li><g:link controller="domain" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Last Updated:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:zoneInstance, field:'lastUpdated')}</td>
