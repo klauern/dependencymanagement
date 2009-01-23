@@ -13,8 +13,13 @@ hibernate {
 environments {
 	development {
 		dataSource {
-			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:hsqldb:mem:devDB"
+            pooled = false
+			dbCreate = "create" // one of 'create', 'create-drop','update'
+            driverClassName = "org.apache.derby.jdbc.ClientDriver"
+            username = ""
+            password = ""
+			url = "jdbc:derby://localhost:1527/DepMgmt"
+            dialect = "org.hibernate.dialect.DerbyDialect"
 		}
 	}
 	test {

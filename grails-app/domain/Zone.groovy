@@ -1,7 +1,11 @@
 class Zone {
-
-    String server
-    String port
-    String name
-    String description
+    String zone_name
+    String zone_type
+    String zone_usage
+    Date dateCreated
+    Date lastUpdated
+    // column 'id' is inferred and created by default.
+    static mapping = {
+        autoTimestamp true
+    }
 }
