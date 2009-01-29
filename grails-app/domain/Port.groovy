@@ -1,7 +1,7 @@
 class Port {
     Domain domain
     int port_number
-    String port_use_description
+    String port_use_description     // Oracle, JMS, HTTP, etc.
 
     Date dateCreated
     Date lastUpdated

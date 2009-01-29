@@ -10,7 +10,7 @@ class Zone {
         columns {
             id column: 'zone_id'
         }
-        id generator:'sequence', params:[sequence:'zone_id']
+//        id generator:'sequence', params:[sequence:'zone_id']
     }
     static hasMany = [domains:Domain]
 }
