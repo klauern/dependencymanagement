@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://eai.alliantenergy.com/schema/EDT_Message_Kickoff"
+    xmlns:tns="http://eai.alliantenergy.com/schema/EDT_Message_Kickoff"
+    elementFormDefault="qualified">
+    <xsd:element name="Date" type="xsd:dateTime"></xsd:element>
+    <xsd:complexType name="SyncType">
+        <xsd:choice>
+            <xsd:element name="Incremental_Sync"></xsd:element>
+            <xsd:element name="Full_Sync"></xsd:element>
+        </xsd:choice>
+    </xsd:complexType>
+</xsd:schema>

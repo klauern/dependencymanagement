@@ -11,4 +11,8 @@ class Vendor {
             id column: 'vendor_id'
         }
     }
+
+    String toString() {
+        return vendor_name
+    }
 }
