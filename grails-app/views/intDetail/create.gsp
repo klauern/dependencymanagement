@@ -28,19 +28,46 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">Date Created:</label>
+                                    <label for="connection">Connection:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${intDetailInstance?.dateCreated}" ></g:datePicker>
+                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'connection','errors')}">
+                                    <g:select optionKey="id" from="${Port.list()}" name="connection.id" value="${intDetailInstance?.connection?.id}" ></g:select>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
+                                    <label for="connection_name">Connectionname:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${intDetailInstance?.lastUpdated}" ></g:datePicker>
+                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'connection_name','errors')}">
+                                    <input type="text" id="connection_name" name="connection_name" value="${fieldValue(bean:intDetailInstance,field:'connection_name')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="description">Description:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'description','errors')}">
+                                    <input type="text" id="description" name="description" value="${fieldValue(bean:intDetailInstance,field:'description')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="direction">Direction:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'direction','errors')}">
+                                    <input type="text" id="direction" name="direction" value="${fieldValue(bean:intDetailInstance,field:'direction')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="username">Username:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'username','errors')}">
+                                    <input type="text" id="username" name="username" value="${fieldValue(bean:intDetailInstance,field:'username')}"/>
                                 </td>
                             </tr> 
                         

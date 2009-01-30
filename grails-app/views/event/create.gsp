@@ -28,15 +28,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">Date Created:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:eventInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${eventInstance?.dateCreated}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="event_name">Eventname:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:eventInstance,field:'event_name','errors')}">
@@ -50,15 +41,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:eventInstance,field:'event_type','errors')}">
                                     <input type="text" id="event_type" name="event_type" value="${fieldValue(bean:eventInstance,field:'event_type')}"/>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:eventInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${eventInstance?.lastUpdated}" ></g:datePicker>
                                 </td>
                             </tr> 
                         
