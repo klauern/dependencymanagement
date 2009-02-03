@@ -30,6 +30,27 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Direction:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:intDetailInstance, field:'direction')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Connection:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="port" action="show" id="${intDetailInstance?.connection?.id}">${intDetailInstance?.connection?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Connectionname:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:intDetailInstance, field:'connection_name')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Date Created:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:intDetailInstance, field:'dateCreated')}</td>
@@ -37,9 +58,23 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Description:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:intDetailInstance, field:'description')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Last Updated:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:intDetailInstance, field:'lastUpdated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Username:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:intDetailInstance, field:'username')}</td>
                             
                         </tr>
                     

@@ -28,15 +28,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">Date Created:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${domainInstance?.dateCreated}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="domain_description">Domaindescription:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'domain_description','errors')}">
@@ -50,15 +41,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'domain_name','errors')}">
                                     <input type="text" id="domain_name" name="domain_name" value="${fieldValue(bean:domainInstance,field:'domain_name')}"/>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${domainInstance?.lastUpdated}" ></g:datePicker>
                                 </td>
                             </tr> 
                         

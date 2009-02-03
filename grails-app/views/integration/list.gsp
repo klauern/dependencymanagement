@@ -23,10 +23,14 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
+                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
+                        
                    	        <th>Destination</th>
                    	    
                    	        <th>Event</th>
                    	    
+                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
+                        
                    	        <th>Source</th>
                    	    
                         </tr>
@@ -37,9 +41,13 @@
                         
                             <td><g:link action="show" id="${integrationInstance.id}">${fieldValue(bean:integrationInstance, field:'id')}</g:link></td>
                         
+                            <td>${fieldValue(bean:integrationInstance, field:'dateCreated')}</td>
+                        
                             <td>${fieldValue(bean:integrationInstance, field:'destination')}</td>
                         
                             <td>${fieldValue(bean:integrationInstance, field:'event')}</td>
+                        
+                            <td>${fieldValue(bean:integrationInstance, field:'lastUpdated')}</td>
                         
                             <td>${fieldValue(bean:integrationInstance, field:'source')}</td>
                         

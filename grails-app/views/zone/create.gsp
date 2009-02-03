@@ -28,19 +28,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">Date Created:</label>
+                                    <label for="zone_type">Zonetype:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${zoneInstance?.dateCreated}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${zoneInstance?.lastUpdated}" ></g:datePicker>
+                                <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'zone_type','errors')}">
+                                    <g:select id="zone_type" name="zone_type" from="${zoneInstance.constraints.zone_type.inList}" value="${zoneInstance.zone_type}" ></g:select>
                                 </td>
                             </tr> 
                         
@@ -50,15 +41,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'zone_name','errors')}">
                                     <input type="text" id="zone_name" name="zone_name" value="${fieldValue(bean:zoneInstance,field:'zone_name')}"/>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="zone_type">Zonetype:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'zone_type','errors')}">
-                                    <input type="text" id="zone_type" name="zone_type" value="${fieldValue(bean:zoneInstance,field:'zone_type')}"/>
                                 </td>
                             </tr> 
                         

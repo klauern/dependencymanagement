@@ -13,4 +13,8 @@ class Zone {
 //        id generator:'sequence', params:[sequence:'zone_id']
     }
     static hasMany = [domains:Domain]
+
+    static constraints = {
+        zone_type(inList:['JCAPS 5.1.x', 'SRE 5.0.5', 'eGate 4.5.3', 'Other'])
+    }
 }

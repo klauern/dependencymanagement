@@ -23,13 +23,13 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
+                   	        <g:sortableColumn property="zone_type" title="Zonetype" />
+                        
                    	        <g:sortableColumn property="dateCreated" title="Date Created" />
                         
                    	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
                         
                    	        <g:sortableColumn property="zone_name" title="Zonename" />
-                        
-                   	        <g:sortableColumn property="zone_type" title="Zonetype" />
                         
                    	        <g:sortableColumn property="zone_usage" title="Zoneusage" />
                         
@@ -41,13 +41,13 @@
                         
                             <td><g:link action="show" id="${zoneInstance.id}">${fieldValue(bean:zoneInstance, field:'id')}</g:link></td>
                         
+                            <td>${fieldValue(bean:zoneInstance, field:'zone_type')}</td>
+                        
                             <td>${fieldValue(bean:zoneInstance, field:'dateCreated')}</td>
                         
                             <td>${fieldValue(bean:zoneInstance, field:'lastUpdated')}</td>
                         
                             <td>${fieldValue(bean:zoneInstance, field:'zone_name')}</td>
-                        
-                            <td>${fieldValue(bean:zoneInstance, field:'zone_type')}</td>
                         
                             <td>${fieldValue(bean:zoneInstance, field:'zone_usage')}</td>
                         

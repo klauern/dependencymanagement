@@ -31,7 +31,9 @@ environments {
 	production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+			url = "jdbc:oracle:thin:@ta04:1521:ta04"
+            username = "eai"
+            password = "eai"
 		}
 	}
 }

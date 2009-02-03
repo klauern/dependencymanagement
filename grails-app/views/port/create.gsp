@@ -28,28 +28,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">Date Created:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:portInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${portInstance?.dateCreated}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="domain">Domain:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:portInstance,field:'domain','errors')}">
                                     <g:select optionKey="id" from="${Domain.list()}" name="domain.id" value="${portInstance?.domain?.id}" ></g:select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:portInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${portInstance?.lastUpdated}" ></g:datePicker>
                                 </td>
                             </tr> 
                         

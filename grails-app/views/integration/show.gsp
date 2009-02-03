@@ -30,6 +30,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Date Created:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:integrationInstance, field:'dateCreated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Destination:</td>
                             
                             <td valign="top" class="value"><g:link controller="vendor" action="show" id="${integrationInstance?.destination?.id}">${integrationInstance?.destination?.encodeAsHTML()}</g:link></td>
@@ -53,6 +60,13 @@
                             <td valign="top" class="name">Event:</td>
                             
                             <td valign="top" class="value"><g:link controller="event" action="show" id="${integrationInstance?.event?.id}">${integrationInstance?.event?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Last Updated:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:integrationInstance, field:'lastUpdated')}</td>
                             
                         </tr>
                     

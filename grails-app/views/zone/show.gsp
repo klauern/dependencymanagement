@@ -30,6 +30,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Zonetype:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:zoneInstance, field:'zone_type')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Date Created:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:zoneInstance, field:'dateCreated')}</td>
@@ -60,13 +67,6 @@
                             <td valign="top" class="name">Zonename:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:zoneInstance, field:'zone_name')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Zonetype:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:zoneInstance, field:'zone_type')}</td>
                             
                         </tr>
                     
