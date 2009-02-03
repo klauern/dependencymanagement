@@ -16,7 +16,7 @@ Scaffolding Requirements
        * Define the start page, some basic layouts and how the CSS will
          format.
 	4. 
-	
+
 Miscellaneous
 -------------
     1. Add more basic bootstrapping for the model:
@@ -25,12 +25,15 @@ Miscellaneous
 		* Port
 		* Vendor
 		* Event
-	   The more bootstrapping we can do on the front-end, the easier it will look to us for accuracy.
-	2. Create a file-reader that will take in a .csv file and attempt to map it to the model.  Potentially unsafe, insecure, etc., but might offer a way to simplify entry.
-	
-	
-	
-	
+	   The more bootstrapping we can do on the front-end, the easier it will
+       look to us for accuracy.
+	2. Create a file-reader that will take in a .csv file and attempt to map it
+       to the model.  Potentially unsafe, insecure, etc., but might offer a way
+       to simplify entry.
+
+
+
+
 References
 ----------
 [inList()]: http://grails.org/doc/1.0.x/ref/Constraints/inList.html
