@@ -30,6 +30,15 @@
               
               <tr class="prop">
                 <td valign="top" class="name">
+                  <label for="direction">Direction:</label>
+                </td>
+                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'direction','errors')}">
+                  <g:select id="direction" name="direction" from="${intDetailInstance.constraints.direction.inList}" value="${intDetailInstance.direction}" ></g:select>
+                </td>
+              </tr>
+              
+              <tr class="prop">
+                <td valign="top" class="name">
                   <label for="connection">Connection:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'connection','errors')}">
@@ -52,15 +61,6 @@
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'description','errors')}">
                   <input type="text" id="description" name="description" value="${fieldValue(bean:intDetailInstance,field:'description')}"/>
-                </td>
-              </tr>
-              
-              <tr class="prop">
-                <td valign="top" class="name">
-                  <label for="direction">Direction:</label>
-                </td>
-                <td valign="top" class="value ${hasErrors(bean:intDetailInstance,field:'direction','errors')}">
-                  <input type="text" id="direction" name="direction" value="${fieldValue(bean:intDetailInstance,field:'direction')}"/>
                 </td>
               </tr>
               

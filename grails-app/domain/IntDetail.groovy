@@ -14,4 +14,7 @@ class IntDetail {
             id column: 'detail_id'
         }
     }
+    static constraints = {
+        direction(inList:['Inbound', 'Outbound', 'Bi-Directional'])
+    }
 }

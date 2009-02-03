@@ -23,6 +23,8 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
+                   	        <g:sortableColumn property="direction" title="Direction" />
+                        
                    	        <th>Connection</th>
                    	    
                    	        <g:sortableColumn property="connection_name" title="Connectionname" />
@@ -30,8 +32,6 @@
                    	        <g:sortableColumn property="dateCreated" title="Date Created" />
                         
                    	        <g:sortableColumn property="description" title="Description" />
-                        
-                   	        <g:sortableColumn property="direction" title="Direction" />
                         
                         </tr>
                     </thead>
@@ -41,6 +41,8 @@
                         
                             <td><g:link action="show" id="${intDetailInstance.id}">${fieldValue(bean:intDetailInstance, field:'id')}</g:link></td>
                         
+                            <td>${fieldValue(bean:intDetailInstance, field:'direction')}</td>
+                        
                             <td>${fieldValue(bean:intDetailInstance, field:'connection')}</td>
                         
                             <td>${fieldValue(bean:intDetailInstance, field:'connection_name')}</td>
@@ -48,8 +50,6 @@
                             <td>${fieldValue(bean:intDetailInstance, field:'dateCreated')}</td>
                         
                             <td>${fieldValue(bean:intDetailInstance, field:'description')}</td>
-                        
-                            <td>${fieldValue(bean:intDetailInstance, field:'direction')}</td>
                         
                         </tr>
                     </g:each>
