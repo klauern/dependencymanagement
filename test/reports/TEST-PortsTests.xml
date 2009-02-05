@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="klauer1nicholas" name="PortsTests" tests="1" time="0.0" timestamp="2009-01-27T20:52:22">
-  <properties />
-  <testcase classname="PortsTests" name="testSomething" time="0.0" />
-  <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-</testsuite>

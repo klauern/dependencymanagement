@@ -1,0 +1,12 @@
+digraph DependencyManagement {
+	node [shape=box];
+	subgraph {
+		port -> domain;
+		domain -> zone;
+		color = blue;
+	}	
+	integration_detail -> integration;
+	event_detail -> integration;
+	vendor -> integration;
+	integration_detail -> port;
+}
