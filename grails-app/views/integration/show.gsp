@@ -77,6 +77,13 @@
                             
                         </tr>
                     
+                        <tr class="prop">
+                            <td valign="top" class="name">Supportinfo:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="support" action="show" id="${integrationInstance?.support_info?.id}">${integrationInstance?.support_info?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
                     </tbody>
                 </table>
             </div>
