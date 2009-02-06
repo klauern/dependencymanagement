@@ -1,0 +1,1 @@
+grails generate-all Contact && grails generate-all Domain && grails generate-all Event && grails generate-all IntDetail && grails generate-all Integration && grails generate-all Port && grails generate-all Support && grails generate-all Vendor && grails generate-all Zone

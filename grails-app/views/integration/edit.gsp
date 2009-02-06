@@ -42,6 +42,7 @@
                   <label for="details">Details:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'details','errors')}">
+<<<<<<< HEAD:grails-app/views/integration/edit.gsp
                   
 <ul>
 <g:each var="d" in="${integrationInstance?.details?}">
@@ -49,6 +50,15 @@
 </g:each>
 </ul>
 <g:link controller="intDetail" params="['integration.id':integrationInstance?.id]" action="create">Add IntDetail</g:link>
+=======
+                  
+<ul>
+<g:each var="d" in="${integrationInstance?.details?}">
+    <li><g:link controller="intDetail" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="intDetail" params="['integration.id':integrationInstance?.id]" action="create">Add IntDetail</g:link>
+>>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/integration/edit.gsp
 
                 </td>
               </tr>
@@ -71,6 +81,18 @@
                 </td>
               </tr>
               
+<<<<<<< HEAD:grails-app/views/integration/edit.gsp
+=======
+              <tr class="prop">
+                <td valign="top" class="name">
+                  <label for="support_info">Supportinfo:</label>
+                </td>
+                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'support_info','errors')}">
+                  <g:select optionKey="id" from="${Support.list()}" name="support_info.id" value="${integrationInstance?.support_info?.id}" ></g:select>
+                </td>
+              </tr>
+              
+>>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/integration/edit.gsp
             </tbody>
           </table>
         </div>

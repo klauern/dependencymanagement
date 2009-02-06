@@ -77,6 +77,16 @@
                             
                         </tr>
                     
+<<<<<<< HEAD:grails-app/views/integration/show.gsp
+=======
+                        <tr class="prop">
+                            <td valign="top" class="name">Supportinfo:</td>
+                            
+                            <td valign="top" class="value"><g:link controller="support" action="show" id="${integrationInstance?.support_info?.id}">${integrationInstance?.support_info?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+>>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/integration/show.gsp
                     </tbody>
                 </table>
             </div>
