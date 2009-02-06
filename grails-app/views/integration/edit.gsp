@@ -71,6 +71,15 @@
                 </td>
               </tr>
               
+              <tr class="prop">
+                <td valign="top" class="name">
+                  <label for="support_info">Supportinfo:</label>
+                </td>
+                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'support_info','errors')}">
+                  <g:select optionKey="id" from="${Support.list()}" name="support_info.id" value="${integrationInstance?.support_info?.id}" ></g:select>
+                </td>
+              </tr>
+              
             </tbody>
           </table>
         </div>

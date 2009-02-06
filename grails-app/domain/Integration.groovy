@@ -2,7 +2,7 @@ class Integration {
     Event event
     Vendor source
     Vendor destination
-    
+    Support support_info
     
     static hasMany = [details:IntDetail]
 
