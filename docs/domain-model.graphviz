@@ -1,5 +1,4 @@
 digraph DependencyManagement {
-	node [shape=box];
 	subgraph {
 		port -> domain;
 		domain -> zone;
