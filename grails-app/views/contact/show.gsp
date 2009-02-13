@@ -30,6 +30,20 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Email:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'email')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Workphone:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'work_phone')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Date Created:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'dateCreated')}</td>
@@ -51,16 +65,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Emailaddresses:</td>
+                            <td valign="top" class="name">Mobilephone:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'email_addresses')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Phones:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'phones')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'mobile_phone')}</td>
                             
                         </tr>
                     

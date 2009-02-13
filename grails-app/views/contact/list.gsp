@@ -23,6 +23,10 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
+                   	        <g:sortableColumn property="email" title="Email" />
+                        
+                   	        <g:sortableColumn property="work_phone" title="Workphone" />
+                        
                    	        <g:sortableColumn property="dateCreated" title="Date Created" />
                         
                    	        <g:sortableColumn property="full_name" title="Fullname" />
@@ -36,6 +40,10 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${contactInstance.id}">${fieldValue(bean:contactInstance, field:'id')}</g:link></td>
+                        
+                            <td>${fieldValue(bean:contactInstance, field:'email')}</td>
+                        
+                            <td>${fieldValue(bean:contactInstance, field:'work_phone')}</td>
                         
                             <td>${fieldValue(bean:contactInstance, field:'dateCreated')}</td>
                         
