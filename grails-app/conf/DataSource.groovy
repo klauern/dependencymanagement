@@ -1,6 +1,7 @@
 dataSource {
 	pooled = true
 	driverClassName = "org.hsqldb.jdbcDriver"
+                url = "jdbc:hsqldb:mem:devDB" // For use with the HSQL in-mem db
 	username = "sa"
 	password = ""
 }
@@ -13,15 +14,17 @@ hibernate {
 environments {
 	development {
 		dataSource {
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+
+            //Uncomment for using the Network-mode Derby client.
+            /*
             pooled = false
-			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            //driverClassName = "org.apache.derby.jdbc.EmbeddedDriver;create=true"
             driverClassName = "org.apache.derby.jdbc.ClientDriver"
             username = ""
             password = ""
-            //url = "jdbc:derby:DepMgmt"
 			url = "jdbc:derby://localhost:1527/DepMgmt"
             dialect = "org.hibernate.dialect.DerbyDialect"
+            */
 		}
 	}
 	test {
