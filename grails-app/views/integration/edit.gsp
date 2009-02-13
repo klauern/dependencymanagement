@@ -33,7 +33,7 @@
                   <label for="destination">Destination:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'destination','errors')}">
-                  <g:select optionKey="id" from="${Vendor.list()}" name="destination.id" value="${integrationInstance?.destination?.id}" ></g:select>
+                  <g:select optionKey="id" from="${Application.list()}" name="destination.id" value="${integrationInstance?.destination?.id}" ></g:select>
                 </td>
               </tr>
               
@@ -42,7 +42,6 @@
                   <label for="details">Details:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'details','errors')}">
-<<<<<<< HEAD:grails-app/views/integration/edit.gsp
                   
 <ul>
 <g:each var="d" in="${integrationInstance?.details?}">
@@ -50,15 +49,6 @@
 </g:each>
 </ul>
 <g:link controller="intDetail" params="['integration.id':integrationInstance?.id]" action="create">Add IntDetail</g:link>
-=======
-                  
-<ul>
-<g:each var="d" in="${integrationInstance?.details?}">
-    <li><g:link controller="intDetail" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
-</g:each>
-</ul>
-<g:link controller="intDetail" params="['integration.id':integrationInstance?.id]" action="create">Add IntDetail</g:link>
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/integration/edit.gsp
 
                 </td>
               </tr>
@@ -77,22 +67,26 @@
                   <label for="source">Source:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'source','errors')}">
-                  <g:select optionKey="id" from="${Vendor.list()}" name="source.id" value="${integrationInstance?.source?.id}" ></g:select>
+                  <g:select optionKey="id" from="${Application.list()}" name="source.id" value="${integrationInstance?.source?.id}" ></g:select>
                 </td>
               </tr>
               
-<<<<<<< HEAD:grails-app/views/integration/edit.gsp
-=======
               <tr class="prop">
                 <td valign="top" class="name">
-                  <label for="support_info">Supportinfo:</label>
+                  <label for="support_contacts">Supportcontacts:</label>
                 </td>
-                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'support_info','errors')}">
-                  <g:select optionKey="id" from="${Support.list()}" name="support_info.id" value="${integrationInstance?.support_info?.id}" ></g:select>
+                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'support_contacts','errors')}">
+                  
+<ul>
+<g:each var="s" in="${integrationInstance?.support_contacts?}">
+    <li><g:link controller="contact" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="contact" params="['integration.id':integrationInstance?.id]" action="create">Add Contact</g:link>
+
                 </td>
               </tr>
               
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/integration/edit.gsp
             </tbody>
           </table>
         </div>

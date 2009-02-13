@@ -28,10 +28,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="name">Name:</label>
+                                    <label for="full_name">Fullname:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:contactInstance,field:'name','errors')}">
-                                    <input type="text" id="name" name="name" value="${fieldValue(bean:contactInstance,field:'name')}"/>
+                                <td valign="top" class="value ${hasErrors(bean:contactInstance,field:'full_name','errors')}">
+                                    <input type="text" id="full_name" name="full_name" value="${fieldValue(bean:contactInstance,field:'full_name')}"/>
                                 </td>
                             </tr> 
                         

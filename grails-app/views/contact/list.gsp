@@ -25,9 +25,9 @@
                         
                    	        <g:sortableColumn property="dateCreated" title="Date Created" />
                         
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
+                   	        <g:sortableColumn property="full_name" title="Fullname" />
                         
-                   	        <g:sortableColumn property="name" title="Name" />
+                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
                         
                         </tr>
                     </thead>
@@ -39,9 +39,9 @@
                         
                             <td>${fieldValue(bean:contactInstance, field:'dateCreated')}</td>
                         
-                            <td>${fieldValue(bean:contactInstance, field:'lastUpdated')}</td>
+                            <td>${fieldValue(bean:contactInstance, field:'full_name')}</td>
                         
-                            <td>${fieldValue(bean:contactInstance, field:'name')}</td>
+                            <td>${fieldValue(bean:contactInstance, field:'lastUpdated')}</td>
                         
                         </tr>
                     </g:each>

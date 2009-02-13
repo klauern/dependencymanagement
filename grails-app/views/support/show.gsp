@@ -37,9 +37,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Description:</td>
+                            <td valign="top" class="name">Disasterrecoverylevel:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'description')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'disaster_recovery_level')}</td>
                             
                         </tr>
                     
@@ -51,23 +51,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Supportendtime:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'support_end_time')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name">Supportlevel:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'support_level')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Supportstarttime:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'support_start_time')}</td>
                             
                         </tr>
                     

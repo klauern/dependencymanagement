@@ -37,6 +37,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Fullname:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'full_name')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Last Updated:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'lastUpdated')}</td>
@@ -44,9 +51,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Name:</td>
+                            <td valign="top" class="name">Emailaddresses:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'name')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'email_addresses')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Phones:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:contactInstance, field:'phones')}</td>
                             
                         </tr>
                     

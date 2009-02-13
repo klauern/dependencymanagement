@@ -4,21 +4,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Integration</title>         
+        <title>Create Application</title>         
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Integration List</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Application List</g:link></span>
         </div>
         <div class="body">
-            <h1>Create Integration</h1>
+            <h1>Create Application</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${integrationInstance}">
+            <g:hasErrors bean="${applicationInstance}">
             <div class="errors">
-                <g:renderErrors bean="${integrationInstance}" as="list" />
+                <g:renderErrors bean="${applicationInstance}" as="list" />
             </div>
             </g:hasErrors>
             <g:form action="save" method="post" >
@@ -28,28 +28,28 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="destination">Destination:</label>
+                                    <label for="application_description">Applicationdescription:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'destination','errors')}">
-                                    <g:select optionKey="id" from="${Application.list()}" name="destination.id" value="${integrationInstance?.destination?.id}" ></g:select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="event">Event:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'event','errors')}">
-                                    <g:select optionKey="id" from="${Event.list()}" name="event.id" value="${integrationInstance?.event?.id}" ></g:select>
+                                <td valign="top" class="value ${hasErrors(bean:applicationInstance,field:'application_description','errors')}">
+                                    <input type="text" id="application_description" name="application_description" value="${fieldValue(bean:applicationInstance,field:'application_description')}"/>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="source">Source:</label>
+                                    <label for="application_name">Applicationname:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:integrationInstance,field:'source','errors')}">
-                                    <g:select optionKey="id" from="${Application.list()}" name="source.id" value="${integrationInstance?.source?.id}" ></g:select>
+                                <td valign="top" class="value ${hasErrors(bean:applicationInstance,field:'application_name','errors')}">
+                                    <input type="text" id="application_name" name="application_name" value="${fieldValue(bean:applicationInstance,field:'application_name')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="support_information">Supportinformation:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:applicationInstance,field:'support_information','errors')}">
+                                    <g:select optionKey="id" from="${Support.list()}" name="support_information.id" value="${applicationInstance?.support_information?.id}" ></g:select>
                                 </td>
                             </tr> 
                         

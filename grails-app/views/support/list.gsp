@@ -25,11 +25,9 @@
                         
                    	        <g:sortableColumn property="dateCreated" title="Date Created" />
                         
-                   	        <g:sortableColumn property="description" title="Description" />
+                   	        <g:sortableColumn property="disaster_recovery_level" title="Disasterrecoverylevel" />
                         
                    	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
-                   	        <g:sortableColumn property="support_end_time" title="Supportendtime" />
                         
                    	        <g:sortableColumn property="support_level" title="Supportlevel" />
                         
@@ -43,11 +41,9 @@
                         
                             <td>${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
                         
-                            <td>${fieldValue(bean:supportInstance, field:'description')}</td>
+                            <td>${fieldValue(bean:supportInstance, field:'disaster_recovery_level')}</td>
                         
                             <td>${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
-                        
-                            <td>${fieldValue(bean:supportInstance, field:'support_end_time')}</td>
                         
                             <td>${fieldValue(bean:supportInstance, field:'support_level')}</td>
                         

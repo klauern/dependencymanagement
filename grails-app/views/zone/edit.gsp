@@ -42,7 +42,6 @@
                   <label for="domains">Domains:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:zoneInstance,field:'domains','errors')}">
-<<<<<<< HEAD:grails-app/views/zone/edit.gsp
                   
 <ul>
 <g:each var="d" in="${zoneInstance?.domains?}">
@@ -50,15 +49,6 @@
 </g:each>
 </ul>
 <g:link controller="domain" params="['zone.id':zoneInstance?.id]" action="create">Add Domain</g:link>
-=======
-                  
-<ul>
-<g:each var="d" in="${zoneInstance?.domains?}">
-    <li><g:link controller="domain" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>
-</g:each>
-</ul>
-<g:link controller="domain" params="['zone.id':zoneInstance?.id]" action="create">Add Domain</g:link>
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/zone/edit.gsp
 
                 </td>
               </tr>

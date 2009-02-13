@@ -30,19 +30,10 @@
               
               <tr class="prop">
                 <td valign="top" class="name">
-                  <label for="description">Description:</label>
+                  <label for="disaster_recovery_level">Disasterrecoverylevel:</label>
                 </td>
-                <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'description','errors')}">
-                  <input type="text" id="description" name="description" value="${fieldValue(bean:supportInstance,field:'description')}"/>
-                </td>
-              </tr>
-              
-              <tr class="prop">
-                <td valign="top" class="name">
-                  <label for="support_end_time">Supportendtime:</label>
-                </td>
-                <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'support_end_time','errors')}">
-                  <input type="text" id="support_end_time" name="support_end_time" value="${fieldValue(bean:supportInstance,field:'support_end_time')}"/>
+                <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'disaster_recovery_level','errors')}">
+                  <input type="text" id="disaster_recovery_level" name="disaster_recovery_level" value="${fieldValue(bean:supportInstance,field:'disaster_recovery_level')}"/>
                 </td>
               </tr>
               
@@ -52,15 +43,6 @@
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'support_level','errors')}">
                   <input type="text" id="support_level" name="support_level" value="${fieldValue(bean:supportInstance,field:'support_level')}"/>
-                </td>
-              </tr>
-              
-              <tr class="prop">
-                <td valign="top" class="name">
-                  <label for="support_start_time">Supportstarttime:</label>
-                </td>
-                <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'support_start_time','errors')}">
-                  <input type="text" id="support_start_time" name="support_start_time" value="${fieldValue(bean:supportInstance,field:'support_start_time')}"/>
                 </td>
               </tr>
               

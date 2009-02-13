@@ -39,7 +39,7 @@
                         <tr class="prop">
                             <td valign="top" class="name">Destination:</td>
                             
-                            <td valign="top" class="value"><g:link controller="vendor" action="show" id="${integrationInstance?.destination?.id}">${integrationInstance?.destination?.encodeAsHTML()}</g:link></td>
+                            <td valign="top" class="value"><g:link controller="application" action="show" id="${integrationInstance?.destination?.id}">${integrationInstance?.destination?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
@@ -73,20 +73,23 @@
                         <tr class="prop">
                             <td valign="top" class="name">Source:</td>
                             
-                            <td valign="top" class="value"><g:link controller="vendor" action="show" id="${integrationInstance?.source?.id}">${integrationInstance?.source?.encodeAsHTML()}</g:link></td>
+                            <td valign="top" class="value"><g:link controller="application" action="show" id="${integrationInstance?.source?.id}">${integrationInstance?.source?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
-<<<<<<< HEAD:grails-app/views/integration/show.gsp
-=======
                         <tr class="prop">
-                            <td valign="top" class="name">Supportinfo:</td>
+                            <td valign="top" class="name">Supportcontacts:</td>
                             
-                            <td valign="top" class="value"><g:link controller="support" action="show" id="${integrationInstance?.support_info?.id}">${integrationInstance?.support_info?.encodeAsHTML()}</g:link></td>
+                            <td  valign="top" style="text-align:left;" class="value">
+                                <ul>
+                                <g:each var="s" in="${integrationInstance.support_contacts}">
+                                    <li><g:link controller="contact" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
                             
                         </tr>
                     
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/integration/show.gsp
                     </tbody>
                 </table>
             </div>

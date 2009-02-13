@@ -15,9 +15,11 @@ environments {
 		dataSource {
             pooled = false
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            //driverClassName = "org.apache.derby.jdbc.EmbeddedDriver;create=true"
             driverClassName = "org.apache.derby.jdbc.ClientDriver"
             username = ""
             password = ""
+            //url = "jdbc:derby:DepMgmt"
 			url = "jdbc:derby://localhost:1527/DepMgmt"
             dialect = "org.hibernate.dialect.DerbyDialect"
 		}

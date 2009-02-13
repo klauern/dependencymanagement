@@ -1,10 +1,14 @@
+
+/**
+ * Integration is the over-arching integration that will occur for a project.
+ * When a project goes underway, it is
+ */
 class Integration {
     Event event
-    Vendor source
-    Vendor destination
-    Support support_info
+    Application source
+    Application destination
     
-    static hasMany = [details:IntDetail]
+    static hasMany = [details:IntDetail, support_contacts:Contact]
 
     Date dateCreated
     Date lastUpdated

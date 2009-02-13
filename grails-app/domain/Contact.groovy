@@ -1,8 +1,9 @@
 class Contact {
 
     // This models the important information on a contact
-    String name
-    static has_many = [email_addresses:String, phones:String]
+    String full_name
+    
+    static hasMany = [email_addresses:String, phones:String]
 
     Date dateCreated
     Date lastUpdated

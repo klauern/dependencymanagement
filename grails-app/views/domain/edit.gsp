@@ -51,7 +51,6 @@
                   <label for="ports">Ports:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:domainInstance,field:'ports','errors')}">
-<<<<<<< HEAD:grails-app/views/domain/edit.gsp
                   
 <ul>
 <g:each var="p" in="${domainInstance?.ports?}">
@@ -59,15 +58,6 @@
 </g:each>
 </ul>
 <g:link controller="port" params="['domain.id':domainInstance?.id]" action="create">Add Port</g:link>
-=======
-                  
-<ul>
-<g:each var="p" in="${domainInstance?.ports?}">
-    <li><g:link controller="port" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
-</g:each>
-</ul>
-<g:link controller="port" params="['domain.id':domainInstance?.id]" action="create">Add Port</g:link>
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:grails-app/views/domain/edit.gsp
 
                 </td>
               </tr>
