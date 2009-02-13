@@ -1,6 +1,6 @@
 class IntDetail {
 
-    String direction        // 'INBOUND' or 'OUTBOUND'
+    String direction        // 'Inbound', 'Outbound', or 'Bi-Directional'
     String description      // Scheduler description, HTTPS, etc.
     String connection_name  // User-given name
     Port connection         // Reference to the actual connection

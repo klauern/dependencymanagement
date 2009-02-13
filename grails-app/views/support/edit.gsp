@@ -33,7 +33,7 @@
                   <label for="disaster_recovery_level">Disasterrecoverylevel:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'disaster_recovery_level','errors')}">
-                  <input type="text" id="disaster_recovery_level" name="disaster_recovery_level" value="${fieldValue(bean:supportInstance,field:'disaster_recovery_level')}"/>
+                  <input type="text" id="disaster_recovery_level" name="disaster_recovery_level" value="${fieldValue(bean:supportInstance,field:'disaster_recovery_level')}" />
                 </td>
               </tr>
               
@@ -42,7 +42,7 @@
                   <label for="support_level">Supportlevel:</label>
                 </td>
                 <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'support_level','errors')}">
-                  <input type="text" id="support_level" name="support_level" value="${fieldValue(bean:supportInstance,field:'support_level')}"/>
+                  <g:select id="support_level" name="support_level" from="${supportInstance.constraints.support_level.inList}" value="${supportInstance.support_level}" ></g:select>
                 </td>
               </tr>
               

@@ -23,13 +23,13 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
                    	        <g:sortableColumn property="disaster_recovery_level" title="Disasterrecoverylevel" />
                         
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
                    	        <g:sortableColumn property="support_level" title="Supportlevel" />
+                        
+                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
+                        
+                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
                         
                         </tr>
                     </thead>
@@ -39,13 +39,13 @@
                         
                             <td><g:link action="show" id="${supportInstance.id}">${fieldValue(bean:supportInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
-                        
                             <td>${fieldValue(bean:supportInstance, field:'disaster_recovery_level')}</td>
                         
-                            <td>${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
-                        
                             <td>${fieldValue(bean:supportInstance, field:'support_level')}</td>
+                        
+                            <td>${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
+                        
+                            <td>${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
                         
                         </tr>
                     </g:each>

@@ -30,13 +30,6 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Date Created:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name">Disasterrecoverylevel:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'disaster_recovery_level')}</td>
@@ -44,16 +37,23 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Last Updated:</td>
+                            <td valign="top" class="name">Supportlevel:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'support_level')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Supportlevel:</td>
+                            <td valign="top" class="name">Date Created:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'support_level')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Last Updated:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
                             
                         </tr>
                     
