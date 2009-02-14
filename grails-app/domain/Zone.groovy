@@ -17,4 +17,8 @@ class Zone {
     static constraints = {
         zone_type(inList:['JCAPS 5.1.x', 'SRE 5.0.5', 'eGate 4.5.3', 'Other'])
     }
+
+    def String toString() {
+        return zone_name + ": " + zone_usage
+    }
 }

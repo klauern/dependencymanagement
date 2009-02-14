@@ -1,24 +1,12 @@
 digraph DependencyManagement {
-<<<<<<< HEAD:docs/domain-model.graphviz
-	node [shape=box];
-=======
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:docs/domain-model.graphviz
 	subgraph {
 		port -> domain;
 		domain -> zone;
 		color = blue;
-<<<<<<< HEAD:docs/domain-model.graphviz
-	}	
-=======
 	}
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:docs/domain-model.graphviz
 	integration_detail -> integration;
 	event_detail -> integration;
 	vendor -> integration;
 	integration_detail -> port;
-<<<<<<< HEAD:docs/domain-model.graphviz
-=======
     contact -> support;
-    
->>>>>>> 9b2ae8e0c1d717947cf4056dcf6178d8c261cd3f:docs/domain-model.graphviz
 }
