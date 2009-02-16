@@ -1,6 +1,6 @@
 /*
  * In an attempt to make the bootstrapping 'look' cleaner, I'm looking into how
- * much work it would take to bootstrap indirectly by using a .json file instaed.
+ * much work it would take to bootstrap indirectly by using a .json file instead.
  * This would at least provide some basic level of visibility into the data instead
  * of purely being repeated by method calls that are less-than-clear.
  *
@@ -25,10 +25,38 @@
         "email"         :"AllanRosanes@alliantenergy.com",
         "work_phone"    :"?????",
         "mobile_phone"  :"????"
+    },
+    {
+        "full_name"     :"Meg Sviatslovsky",
+        "email"         :"MegSviatslovsky@alliantenergy.com",
+        "work_phone"    :"1.666.5.5.15",
+        "mobile_phone"  :"Something"
     }
     ],
-    "Zones"     : [],
+    "Zones"     : [
+    {
+        "zone_name"     :"",
+        "zone_type"     :"",
+        "zone_usage"    :""
+    },
+    {
+        "zone_name"     :"",
+        "zone_type"     :"",
+        "zone_usage"    :""
+    }
+    ],
     "Events"    : [],
     "Ports"     : [],
-    "Domains"   : []
+    "Domains"   : [],
+    "Supports"  : [
+    {
+        "support_level" :"",
+        "disaster_recovery_level":""
+    },
+    {
+        "support_level":"",
+        "disaster_recovery_level":""
+    }
+
+    ]
 }

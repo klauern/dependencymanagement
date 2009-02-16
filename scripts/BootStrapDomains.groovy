@@ -11,4 +11,5 @@ import grails.converters.*
 
 def jsonArray = JSON.parse(new File("./docs/SomeBootStrapInfo.json").getText())
 def contacts = jsonArray.get("Contacts")
-contacts[1].toString()
+contacts[1]
+println(contacts[1])

@@ -15,7 +15,9 @@ environments {
 	development {
 		dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-
+            // url = "jdbc:h2:mem:DevDB"
+            driverClassName = "org.h2.Driver"
+            url = "jdbc:h2:./db/test"
             //Uncomment for using the Network-mode Derby client.
             /*
             pooled = false
@@ -30,7 +32,8 @@ environments {
 	test {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:mem:testDb"
+            url = "jdbc:h2:file:./db/test"
+            driverClassName = "org.h2.Driver"
 		}
 	}
 	production {
