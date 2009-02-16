@@ -13,20 +13,22 @@
  */
 
 {
-    "Contacts" : [
+    "Contacts"  : [
     {
-        "full_name": "Nick Klauer",
-        "email":"NicholasKlauer@alliantenergy.com",
-        "work_phone":"1.608.458.3922",
-        "mobile_phone":"1.608.516.7615"
+        "full_name"     :"Nick Klauer",
+        "email"         :"NicholasKlauer@alliantenergy.com",
+        "work_phone"    :"1.608.458.3922",
+        "mobile_phone"  :"1.608.516.7615"
     },
-    {   "full_name":"Allan Rosanes",
-        "email":"AllanRosanes@alliantenergy.com",
-        "work_phone":"?????",
-        "mobile_phone":"????"}
+    {   
+        "full_name"     :"Allan Rosanes",
+        "email"         :"AllanRosanes@alliantenergy.com",
+        "work_phone"    :"?????",
+        "mobile_phone"  :"????"
+    }
     ],
-    "Zones" : [],
-    "Events": [],
-    "Ports" :[],
-    "Domains":[]
+    "Zones"     : [],
+    "Events"    : [],
+    "Ports"     : [],
+    "Domains"   : []
 }
