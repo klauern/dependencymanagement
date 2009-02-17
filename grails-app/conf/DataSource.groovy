@@ -17,7 +17,7 @@ environments {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
             // url = "jdbc:h2:mem:DevDB"
             driverClassName = "org.h2.Driver"
-            url = "jdbc:h2:./db/test"
+            url = "jdbc:h2:./db/dev"
             //Uncomment for using the Network-mode Derby client.
             /*
             pooled = false
