@@ -4,6 +4,20 @@ class BootStrap {
 
     def init = { servletContext ->
 
+                 new JcapsServer(servername:"eaitestpart1").save()
+         new JcapsServer(servername:"eaitestpart2").save()
+         new JcapsServer(servername:"eaitestpart3").save()
+         new JcapsServer(servername:"eaitestpart4").save()
+         def s = new JcapsServer(servername:"eaitestpart5").save()
+         new JcapsServer(servername:"eaitestpart6").save()
+         new JcapsServer(servername:"eaitestpart7").save()
+         new JcapsServer(servername:"eaitestpart8").save()
+         new JcapsServer(servername:"eaitestpart9").save()
+         def d = new Domain(alias:"EmplInfo", servername:s, port:18000).save()
+         //new JcapsCollabMonitor(short_name:"Unmatched Collab To Remove", domain:d).save()
+
+
+
         // Base Types (don't share relationships with other types):
         // Contacts
         def contact_a = new Contact(full_name:"Meg Sviatslovsky",email:"megsviatslovsky@alliantenergy.com",

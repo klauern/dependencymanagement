@@ -1,0 +1,248 @@
+dpFmtXmlLocaEmplInfoPeop1112059591|FormatLocationFromPS|dpFmtXmlLocationFromPS_TEST|svcJcdFmtXmlLocation
+  is UP since Thu Aug 14 12:13:19 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrLocationPre":0]
+MBean Name: [SeeBeyond:GUID={38000000-1E2BB35C180100-0A010D53-01},Name=dpFmtXmlLocaEmplInfoPeop1112059591|FormatLocationFromPS|dpFmtXmlLocationFromPS_TEST|etXmlPsHrLocationPre_svcJcdFmtXmlLocation]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraEmployeEmplInfoGIMM1295336695|EmployeeToGIMMS2|dpOraEmployeeToGimms2|svcJcdEmployeeToGimms2
+  is UP since Tue Aug 19 10:31:59 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmployee":0]
+MBean Name: [SeeBeyond:GUID={13000000-545378DB1B0100-0A010D55-01},Name=dpOraEmployeEmplInfoGIMM1295336695|EmployeeToGIMMS2|dpOraEmployeeToGimms2|tpcXmlPsHrEmployee_svcJcdEmployeeToGimms2]
+Stoppable? true
+Number of Message in Process: 1
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlEmplEmplInfoPeop_1400562697|FormatEmplJobFromPS|dpFmtXmlEmplJobFromPS_TEST|svcJcdXmlFmtEmplJobSync
+  is UP since Thu Aug 14 12:15:15 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmplJobSyncPre":0]
+MBean Name: [SeeBeyond:GUID={33000000-95C488ED190100-0A010B1A-01},Name=dpFmtXmlEmplEmplInfoPeop_1400562697|FormatEmplJobFromPS|dpFmtXmlEmplJobFromPS_TEST|tpcXmlPsHrEmplJobSyncPre_svcJcdXmlFmtEmplJobSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlDepaEmplInfoPeop_1074068403|FormatDepartmentFromPS|dpFmtXmlDepartmentFromPS_TEST|svcJcdFmtXmlDepartment
+  is UP since Thu Aug 14 12:13:07 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrDeptPre":0]
+MBean Name: [SeeBeyond:GUID={30010000-4867A0B1170100-0A010D57-01},Name=dpFmtXmlDepaEmplInfoPeop_1074068403|FormatDepartmentFromPS|dpFmtXmlDepartmentFromPS_TEST|tpcXmlPsHrDeptPre_svcJcdFmtXmlDepartment]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlPosiEmplInfoPeop1564740063|FormatPositionFromPS|dpFmtXmlPositionFromPS_TEST|svcJcdFmtXmlPosition
+  is UP since Thu Aug 14 12:15:05 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrPositionPre":0]
+MBean Name: [SeeBeyond:GUID={27000000-3D64B880190100-0A010D56-01},Name=dpFmtXmlPosiEmplInfoPeop1564740063|FormatPositionFromPS|dpFmtXmlPositionFromPS_TEST|tpcXmlPsHrPositionPre_svcJcdFmtXmlPosition]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlEmplEmplInfoPeop_1400562697|FormatEmplJobFromPS|dpFmtXmlEmplJobFromPS_TEST|svcJcdXmlFmtEmplJob
+  is UP since Thu Aug 14 12:15:15 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmplJobPre":5]
+MBean Name: [SeeBeyond:GUID={32000000-95C488ED190100-0A010B1A-01},Name=dpFmtXmlEmplEmplInfoPeop_1400562697|FormatEmplJobFromPS|dpFmtXmlEmplJobFromPS_TEST|tpcXmlPsHrEmplJobPre_svcJcdXmlFmtEmplJob]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: -1
+--------
+dpOraJobToLHEmplInfoLigh_1200385707|JobToLightHouse|dpOraJobToLH_TEST|svcJcdOraJobToLightHouse
+  is UP since Thu Aug 14 12:17:01 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrJob":0]
+MBean Name: [SeeBeyond:GUID={39000000-C3779C981B0100-0A010D5B-01},Name=dpOraJobToLHEmplInfoLigh_1200385707|JobToLightHouse|dpOraJobToLH_TEST|tpcXmlPsHrJob_svcJcdOraJobToLightHouse]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraEmployeEmplInfoLega_15220664|EmployeeToLegalMattersFile|dpOraEmployeeToLMF_TEST|svcJcdOraEmployeeToLegalMattersFile
+  is UP since Thu Aug 14 12:16:01 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmployee":9]
+MBean Name: [SeeBeyond:GUID={06000000-468152561B0100-0A010D53-01},Name=dpOraEmployeEmplInfoLega_15220664|EmployeeToLegalMattersFile|dpOraEmployeeToLMF_TEST|tpcXmlPsHrEmployee_svcJcdOraEmployeeToLegalMattersFile]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: -4
+--------
+dpFmtXmlCompEmplInfoPeop_1439620745|FormatCompanyFromPS|dpFmtXmlCompanyFromPS_TEST|svcJcdFmtXmlCompanySync
+  is UP since Thu Aug 14 12:12:56 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrCompanySyncPre":0]
+MBean Name: [SeeBeyond:GUID={1F010000-4867A0B1170100-0A010D57-01},Name=dpFmtXmlCompEmplInfoPeop_1439620745|FormatCompanyFromPS|dpFmtXmlCompanyFromPS_TEST|tpcXmlPsHrCompanySyncPre_svcJcdFmtXmlCompanySync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpXmlEmplParEmplInfoPeop2145861897|GenericInFromPS|dpXmlEmplParseGenericIn_TEST|svcJcdXmlEmplParseGenericIn
+  is UP since Thu Aug 14 12:13:59 CDT 2008
+  messages processed per queue: ["EAI_EMPL_TO_JCAPS":5]
+MBean Name: [SeeBeyond:GUID={40000000-67DEEF1A190100-0A010B1A-01},Name=dpXmlEmplParEmplInfoPeop2145861897|GenericInFromPS|dpXmlEmplParseGenericIn_TEST|EAI_EMPL_TO_JCAPS_svcJcdXmlEmplParseGenericIn]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: -1
+--------
+dpFmtXmlEmplEmplInfoPeop_581898217|FormatEmplBasicFromPS|dpFmtXmlEmplBasicFromPS_TEST|svcJcdXmlFmtEmplBasic
+  is UP since Thu Aug 14 12:15:23 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmplBasicPre":0]
+MBean Name: [SeeBeyond:GUID={23000000-4BBBB2491A0100-0A010B1A-01},Name=dpFmtXmlEmplEmplInfoPeop_581898217|FormatEmplBasicFromPS|dpFmtXmlEmplBasicFromPS_TEST|tpcXmlPsHrEmplBasicPre_svcJcdXmlFmtEmplBasic]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlEmerEmplInfoPeop905141089|FormatEmergCntctFromPS|dpFmtXmlEmergCntctFromPS_TEST|svcJcdFmtXmlEmergCntctSyncFromPS
+  is UP since Thu Aug 14 12:14:41 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmplEmergCntctSyncPre":0]
+MBean Name: [SeeBeyond:GUID={12000000-BD11F461190100-0A010B1A-01},Name=dpFmtXmlEmerEmplInfoPeop905141089|FormatEmergCntctFromPS|dpFmtXmlEmergCntctFromPS_TEST|tpcXmlPsHrEmplEmergCntctSyncPre_svcJcdFmtXmlEmergCntctSyncFromPS]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraEmployeEmplInfoLigh991214037|EmployeeToLightHouse|dpOraEmployeeToLH_TEST|svcJcdOraEmployeeToLH
+  is UP since Thu Aug 14 12:17:22 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmployee":9]
+MBean Name: [SeeBeyond:GUID={07000000-855A929D1B0100-0A010D5B-01},Name=dpOraEmployeEmplInfoLigh991214037|EmployeeToLightHouse|dpOraEmployeeToLH_TEST|tpcXmlPsHrEmployee_svcJcdOraEmployeeToLH]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: -4
+--------
+dpFmtXmlEmplEmplInfoPeop_581898217|FormatEmplBasicFromPS|dpFmtXmlEmplBasicFromPS_TEST|svcJcdXmlFmtEmplBasicSync
+  is UP since Thu Aug 14 12:15:23 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmplBasicSyncPre":0]
+MBean Name: [SeeBeyond:GUID={24000000-4BBBB2491A0100-0A010B1A-01},Name=dpFmtXmlEmplEmplInfoPeop_581898217|FormatEmplBasicFromPS|dpFmtXmlEmplBasicFromPS_TEST|tpcXmlPsHrEmplBasicSyncPre_svcJcdXmlFmtEmplBasicSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlDepaEmplInfoPeop_1074068403|FormatDepartmentFromPS|dpFmtXmlDepartmentFromPS_TEST|svcJcdFmtXmlDepartmentSync
+  is UP since Thu Aug 14 12:13:07 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrDeptSyncPre":0]
+MBean Name: [SeeBeyond:GUID={2F010000-4867A0B1170100-0A010D57-01},Name=dpFmtXmlDepaEmplInfoPeop_1074068403|FormatDepartmentFromPS|dpFmtXmlDepartmentFromPS_TEST|tpcXmlPsHrDeptSyncPre_svcJcdFmtXmlDepartmentSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraEmployeEmplInfoGIMM_505679645|EmployeeToGIMMS|dpOraEmployeeToGimms|svcJcdEmployeeToGimms
+  is UP since Tue Aug 19 10:59:23 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmployee":0]
+MBean Name: [SeeBeyond:GUID={09000000-545378DB1B0100-0A010D55-01},Name=dpOraEmployeEmplInfoGIMM_505679645|EmployeeToGIMMS|dpOraEmployeeToGimms|tpcXmlPsHrEmployee_svcJcdEmployeeToGimms]
+Stoppable? true
+Number of Message in Process: 1
+Number of Collaboration Instances: 1
+--------
+dpOraCompanyEmplInfoLigh2134761429|CompanyToLightHouse|dpOraCompanyToLH_TEST|svcJcdOraCompanyToLH
+  is UP since Thu Aug 14 12:16:49 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrCompany":0]
+MBean Name: [SeeBeyond:GUID={31000000-C3779C981B0100-0A010D5B-01},Name=dpOraCompanyEmplInfoLigh2134761429|CompanyToLightHouse|dpOraCompanyToLH_TEST|tpcXmlPsHrCompany_svcJcdOraCompanyToLH]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlBusUEmplInfoPeop_2038675689|FormatBusUnitFromPS|dpFmtXmlBusUnitFromPS_TEST|svcJcdFmtXmlBusUnitSync
+  is UP since Thu Aug 14 12:12:43 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrBusUnitSyncPre":0]
+MBean Name: [SeeBeyond:GUID={0A010000-4867A0B1170100-0A010D57-01},Name=dpFmtXmlBusUEmplInfoPeop_2038675689|FormatBusUnitFromPS|dpFmtXmlBusUnitFromPS_TEST|tpcXmlPsHrBusUnitSyncPre_svcJcdFmtXmlBusUnitSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraLocatioEmplInfoLigh_1797918731|LocationToLightHouse|dpOraLocationToLH_TEST|svcJcdOraLocationToLH
+  is UP since Thu Aug 14 12:17:07 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrLocation":0]
+MBean Name: [SeeBeyond:GUID={41000000-C3779C981B0100-0A010D5B-01},Name=dpOraLocatioEmplInfoLigh_1797918731|LocationToLightHouse|dpOraLocationToLH_TEST|tpcXmlPsHrLocation_svcJcdOraLocationToLH]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpXmlParseGeEmplInfoLigh_1622659196|GenericInFromLightHouse|dpXmlParseGenericFromLH_TEST|svcJcdXmlLHParseGeneric
+  is UP since Thu Aug 14 12:16:25 CDT 2008
+  messages processed per queue: ["tpcEncLHGeneric":0]
+MBean Name: [SeeBeyond:GUID={EE0D0000-267E1C6F1B0100-0A010D5B-01},Name=dpXmlParseGeEmplInfoLigh_1622659196|GenericInFromLightHouse|dpXmlParseGenericFromLH_TEST|tpcEncLHGeneric_svcJcdXmlLHParseGeneric]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraBusinesEmplInfoLigh_1121763947|BusinessUnitToLightHouse|dpOraBusinessUnitToLH_TEST|svcJcdOraBusinessUnitToLH
+  is UP since Thu Aug 14 12:16:33 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrBusUnit":0]
+MBean Name: [SeeBeyond:GUID={29000000-C3779C981B0100-0A010D5B-01},Name=dpOraBusinesEmplInfoLigh_1121763947|BusinessUnitToLightHouse|dpOraBusinessUnitToLH_TEST|tpcXmlPsHrBusUnit_svcJcdOraBusinessUnitToLH]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtEmplPhoEmplInfoCPDE1664046991|EmployeePhoneFromCPD|dpFmtEmplPhoneFromCpd_TEST|svcJcdXmlFmtEmplPhoneSync
+  is UP since Thu Aug 14 12:17:28 CDT 2008
+  messages processed per queue: ["tpcXmlCpdEmplPhonePre":3]
+MBean Name: [SeeBeyond:GUID={11000000-855A929D1B0100-0A010D5B-01},Name=dpFmtEmplPhoEmplInfoCPDE1664046991|EmployeePhoneFromCPD|dpFmtEmplPhoneFromCpd_TEST|tpcXmlCpdEmplPhonePre_svcJcdXmlFmtEmplPhoneSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: -1
+--------
+dpFmtXmlPosiEmplInfoPeop1564740063|FormatPositionFromPS|dpFmtXmlPositionFromPS_TEST|svcJcdFmtXmlPositionSync
+  is UP since Thu Aug 14 12:15:05 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrPositionSyncPre":0]
+MBean Name: [SeeBeyond:GUID={28000000-3D64B880190100-0A010D56-01},Name=dpFmtXmlPosiEmplInfoPeop1564740063|FormatPositionFromPS|dpFmtXmlPositionFromPS_TEST|tpcXmlPsHrPositionSyncPre_svcJcdFmtXmlPositionSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlJobFEmplInfoPeop1757116791|FormatJobFromPS|dpFmtXmlJobFromPS_TEST|svcJcdFmtXmlJobSync
+  is UP since Thu Aug 14 12:14:55 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrJobSyncPre":0]
+MBean Name: [SeeBeyond:GUID={B3000000-3D64B880190100-0A010D56-01},Name=dpFmtXmlJobFEmplInfoPeop1757116791|FormatJobFromPS|dpFmtXmlJobFromPS_TEST|tpcXmlPsHrJobSyncPre_svcJcdFmtXmlJobSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlLocaEmplInfoPeop1112059591|FormatLocationFromPS|dpFmtXmlLocationFromPS_TEST|svcJcdFmtXmlLocationSync
+  is UP since Thu Aug 14 12:13:19 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrLocationSyncPre":0]
+MBean Name: [SeeBeyond:GUID={39000000-1E2BB35C180100-0A010D53-01},Name=dpFmtXmlLocaEmplInfoPeop1112059591|FormatLocationFromPS|dpFmtXmlLocationFromPS_TEST|etXmlPsHrLocationSyncPre_svcJcdFmtXmlLocationSync]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlCompEmplInfoPeop_1439620745|FormatCompanyFromPS|dpFmtXmlCompanyFromPS_TEST|svcJcdFmtXmlCompany
+  is UP since Thu Aug 14 12:12:56 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrCompanyPre":0]
+MBean Name: [SeeBeyond:GUID={1E010000-4867A0B1170100-0A010D57-01},Name=dpFmtXmlCompEmplInfoPeop_1439620745|FormatCompanyFromPS|dpFmtXmlCompanyFromPS_TEST|tpcXmlPsHrCompanyPre_svcJcdFmtXmlCompany]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraLocatioEmplInfoGIMM1025780885|LocationToGIMMS|dpOraLocationToGimms|svcJcdLocationToGimms
+  is UP since Tue Aug 19 12:39:30 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrLocation":0]
+MBean Name: [SeeBeyond:GUID={1F000000-545378DB1B0100-0A010D55-01},Name=dpOraLocatioEmplInfoGIMM1025780885|LocationToGIMMS|dpOraLocationToGimms|tpcXmlPsHrLocation_svcJcdLocationToGimms]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlJobFEmplInfoPeop1757116791|FormatJobFromPS|dpFmtXmlJobFromPS_TEST|svcJcdFmtXmlJob
+  is UP since Thu Aug 14 12:14:55 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrJobPre":0]
+MBean Name: [SeeBeyond:GUID={B2000000-3D64B880190100-0A010D56-01},Name=dpFmtXmlJobFEmplInfoPeop1757116791|FormatJobFromPS|dpFmtXmlJobFromPS_TEST|tpcXmlPsHrJobPre_svcJcdFmtXmlJob]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpOraEmployeEmplInfoIAve1855671541|EmployeeToiAvenue|dpOraEmployeeToiAvenue_TEST1|svcJcdOraEmployeeToiAvenue
+  is UP since Thu Aug 14 12:16:12 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmployee":9]
+MBean Name: [SeeBeyond:GUID={0F000000-468152561B0100-0A010D53-01},Name=dpOraEmployeEmplInfoIAve1855671541|EmployeeToiAvenue|dpOraEmployeeToiAvenue_TEST1|tpcXmlPsHrEmployee_svcJcdOraEmployeeToiAvenue]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: -4
+--------
+dpFmtXmlEmerEmplInfoPeop905141089|FormatEmergCntctFromPS|dpFmtXmlEmergCntctFromPS_TEST|svcJcdFmtXmlEmergCntctFromPS
+  is UP since Thu Aug 14 12:14:41 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrEmplEmergCntctPre":0]
+MBean Name: [SeeBeyond:GUID={11000000-BD11F461190100-0A010B1A-01},Name=dpFmtXmlEmerEmplInfoPeop905141089|FormatEmergCntctFromPS|dpFmtXmlEmergCntctFromPS_TEST|tpcXmlPsHrEmplEmergCntctPre_svcJcdFmtXmlEmergCntctFromPS]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------
+dpFmtXmlBusUEmplInfoPeop_2038675689|FormatBusUnitFromPS|dpFmtXmlBusUnitFromPS_TEST|svcJcdFmtXmlBusUnit
+  is UP since Thu Aug 14 12:12:44 CDT 2008
+  messages processed per queue: ["tpcXmlPsHrBusUnitPre":0]
+MBean Name: [SeeBeyond:GUID={09010000-4867A0B1170100-0A010D57-01},Name=dpFmtXmlBusUEmplInfoPeop_2038675689|FormatBusUnitFromPS|dpFmtXmlBusUnitFromPS_TEST|tpcXmlPsHrBusUnitPre_svcJcdFmtXmlBusUnit]
+Stoppable? true
+Number of Message in Process: 0
+Number of Collaboration Instances: 1
+--------

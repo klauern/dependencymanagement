@@ -1,14 +1,24 @@
 class Domain {
-    String domain_name
-    String domain_description
-    Zone zone
-    Date dateCreated
-    Date lastUpdated
-    static mapping = {
-        autoTimestamp true
-        columns {
-            id column: 'domain_id'
-        }
+    String alias        // CAD domain, AMI domain 1, etc.
+    JcapsServer servername
+    Integer port
+
+    static belongsTo = JcapsServer
+    static hasMany = [collabs:JcapsCollabMonitor]
+
+   Date dateCreated
+   Date lastUpdated
+
+   static mapping = {
+      autoTimestamp true
+   }
+
+   static constraints = {
+      servername(blank:false)
+      port(blank:false)
+   }
+
+    String toString() {
+        return "${alias}"
     }
-    static hasMany = [ports:Port]
 }
