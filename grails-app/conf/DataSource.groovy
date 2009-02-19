@@ -28,7 +28,7 @@ environments {
 		dataSource {
 			dbCreate = "update"
 			url = "jdbc:oracle:thin:@ta04:1521:ta04"
-            driverClassName = "" // To Be Determined.  Find this actually.
+            driverClass1Name = "oracle.jdbc.OracleDriver" // To Be Determined.  Find this actually.
             username = "eai"
             password = "eai"
 		}
