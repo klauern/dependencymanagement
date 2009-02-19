@@ -1,7 +1,7 @@
 dataSource {
 	pooled = true
 	driverClassName = "org.hsqldb.jdbcDriver"
-                url = "jdbc:hsqldb:mem:devDB" // For use with the HSQL in-mem db
+    url = "jdbc:hsqldb:mem:devDB" // For use with the HSQL in-mem db
 	username = "sa"
 	password = ""
 }
@@ -15,31 +15,20 @@ environments {
 	development {
 		dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            // url = "jdbc:h2:mem:DevDB"
-            driverClassName = "org.h2.Driver"
-            url = "jdbc:h2:./db/dev"
-            //Uncomment for using the Network-mode Derby client.
-            /*
-            pooled = false
-            driverClassName = "org.apache.derby.jdbc.ClientDriver"
-            username = ""
-            password = ""
-			url = "jdbc:derby://localhost:1527/DepMgmt"
-            dialect = "org.hibernate.dialect.DerbyDialect"
-            */
+            url = "jdbc:hsqldb:./db/devDB"
 		}
 	}
 	test {
 		dataSource {
 			dbCreate = "update"
-            url = "jdbc:h2:file:./db/test"
-            driverClassName = "org.h2.Driver"
+            url = "jdbc:hsqldb:file:./db/test"
 		}
 	}
 	production {
 		dataSource {
 			dbCreate = "update"
 			url = "jdbc:oracle:thin:@ta04:1521:ta04"
+            driverClassName = "" // To Be Determined.  Find this actually.
             username = "eai"
             password = "eai"
 		}

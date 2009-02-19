@@ -1,64 +1,54 @@
 
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Integration List</title>
-    </head>
-    <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="create" action="create">New Integration</g:link></span>
-        </div>
-        <div class="body">
-            <h1>Integration List</h1>
-            <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
-            </g:if>
-            <div class="list">
-                <table>
-                    <thead>
-                        <tr>
-                        
-                   	        <g:sortableColumn property="id" title="Id" />
-                        
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
-                   	        <th>Destination</th>
-                   	    
-                   	        <th>Event</th>
-                   	    
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
-                   	        <th>Source</th>
-                   	    
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <g:each in="${integrationInstanceList}" status="i" var="integrationInstance">
-                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
-                            <td><g:link action="show" id="${integrationInstance.id}">${fieldValue(bean:integrationInstance, field:'id')}</g:link></td>
-                        
-                            <td>${fieldValue(bean:integrationInstance, field:'dateCreated')}</td>
-                        
-                            <td>${fieldValue(bean:integrationInstance, field:'destination')}</td>
-                        
-                            <td>${fieldValue(bean:integrationInstance, field:'event')}</td>
-                        
-                            <td>${fieldValue(bean:integrationInstance, field:'lastUpdated')}</td>
-                        
-                            <td>${fieldValue(bean:integrationInstance, field:'source')}</td>
-                        
-                        </tr>
-                    </g:each>
-                    </tbody>
-                </table>
-            </div>
-            <div class="paginateButtons">
-                <g:paginate total="${Integration.count()}" />
-            </div>
-        </div>
-    </body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="layout" content="main" />
+    <title>Integration List</title>
+  </head>
+  <body>
+    <div class="nav">
+      <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
+      <span class="menuButton"><g:link class="create" action="create">New Integration</g:link></span>
+    </div>
+    <div class="body">
+      <h1>Integration List</h1>
+      <p>This listing shows all of the integration points that we currently implement.
+      This is a bigger-picture of integrations and should serve as the focus for support needs.
+      Please select one of the integrations below to see the connectivity points and various
+      components that this integration will connect to.</p>
+      <g:if test="${flash.message}">
+        <div class="message">${flash.message}</div>
+      </g:if>
+      <div class="list">
+        <table>
+          <thead>
+            <tr>
+              <g:sortableColumn property="id" title="Id" />
+              <th>Destination</th>
+              <th>Event</th>
+              <th>Source</th>
+              <g:sortableColumn property="dateCreated" title="Date Created" />
+              <g:sortableColumn property="lastUpdated" title="Last Updated" />
+            </tr>
+          </thead>
+          <tbody>
+            <g:each in="${integrationInstanceList}" status="i" var="integrationInstance">
+              <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+                <td><g:link action="show" id="${integrationInstance.id}">${fieldValue(bean:integrationInstance, field:'id')}</g:link></td>
+                <td>${fieldValue(bean:integrationInstance, field:'destination')}</td>
+                <td>${fieldValue(bean:integrationInstance, field:'event')}</td>
+                <td>${fieldValue(bean:integrationInstance, field:'source')}</td>
+                <td>${fieldValue(bean:integrationInstance, field:'dateCreated')}</td>
+                <td>${fieldValue(bean:integrationInstance, field:'lastUpdated')}</td>
+              </tr>
+            </g:each>
+          </tbody>
+        </table>
+      </div>
+      <div class="paginateButtons">
+        <g:paginate total="${Integration.count()}" />
+      </div>
+    </div>
+  </body>
 </html>
