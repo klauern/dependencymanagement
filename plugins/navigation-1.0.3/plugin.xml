@@ -1,0 +1,12 @@
+<plugin name='navigation' version='1.0.3'>
+  <author>Marc Palmer</author>
+  <authorEmail>marc@anyware.co.uk</authorEmail>
+  <title>Site Menu Navigation</title>
+  <description>Tags for doing site navigation and menus by convention
+</description>
+  <documentation>http://grails.org/Navigation+Plugin</documentation>
+  <resources>
+    <resource>NavigationService</resource>
+    <resource>NavigationTagLib</resource>
+  </resources>
+</plugin>

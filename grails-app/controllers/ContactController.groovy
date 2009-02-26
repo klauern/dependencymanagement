@@ -1,4 +1,6 @@
 class ContactController {
+
+    static navigation = true
     
     def index = { redirect(action:list,params:params) }
 
