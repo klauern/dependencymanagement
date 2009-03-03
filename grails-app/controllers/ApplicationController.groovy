@@ -1,6 +1,12 @@
 class ApplicationController {
 
-    static navigation = true
+    static navigation = [
+        group:'tabs',
+        order:10,
+        title:'Vendor Applications',
+        action:'index',
+        subItems:['list', 'create']
+    ]
     
     def index = { redirect(action:list,params:params) }
 
