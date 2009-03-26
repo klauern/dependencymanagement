@@ -1,0 +1,3 @@
+Some resources to look at:
+
+EtherPad for this: http://etherpad.com/DependencyManagement
