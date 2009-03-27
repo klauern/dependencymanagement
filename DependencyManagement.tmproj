@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>filename</key>
-			<string>DependencyMgmt.launch</string>
+			<string>DependencyManagement.launch</string>
 		</dict>
 		<dict>
 			<key>filename</key>
