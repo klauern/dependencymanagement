@@ -53,7 +53,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="\${${className}.count()}" />
+                <g:paginate total="\${${propertyName}Total}" />
             </div>
         </div>
     </body>

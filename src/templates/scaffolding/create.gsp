@@ -40,7 +40,7 @@
 
                             Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
                             props.each { p ->
-                                if(p.type != Set.class) {
+                                if(!Collection.class.isAssignableFrom(p.type)) {
                                     cp = domainClass.constrainedProperties[p.name]
                                     display = (cp ? cp.display : true)        
                                     if(display) { %>

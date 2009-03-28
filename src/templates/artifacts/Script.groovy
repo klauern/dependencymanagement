@@ -1,13 +1,7 @@
-import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU
+includeTargets << grailsScript("Init")
 
-grailsHome = Ant.project.properties."environment.GRAILS_HOME"
-
-includeTargets << grailsScript ( "Init" )
-
-target('default': "The description of the script goes here!") {
-    doStuff()
+target(main: "The description of the script goes here!") {
+    // TODO: Implement script here
 }
 
-target(doStuff: "The implementation task") {
-
-}
+setDefaultTarget(main)
