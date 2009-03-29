@@ -2,6 +2,10 @@ import grails.converters.*
 
 class BootStrap {
 
+    def supports = []
+    def applications = []
+    def events = []
+
     def init = { servletContext ->
 
         // Base Types (don't share relationships with other types):
@@ -20,11 +24,13 @@ class BootStrap {
         def zone_c = new Zone(zone_name:"sreprodpart1",zone_type:"SRE 5.0.5",
             zone_usage:"SRE EmplInfo Schema").save()
         // Support
-
+        createSupportAry()
 
         // Types that share something from another table:
         // Events
+        createEvents()
         // Application
+        createApplications()
         // Ports
         // Events
         // Domains
@@ -37,6 +43,7 @@ class BootStrap {
 
         def jsonArray = JSON.parse(new File("./docs/SomeBootStrapInfo.json").getText())
 
+
     }
 
 
@@ -46,4 +53,29 @@ class BootStrap {
 
     def destroy = {
     }
+
+    def createSupportAry() {
+        def dr = ['1', '2', '3']
+        def sp = ['Low', 'Medium', 'High']
+        dr.each { d ->
+            sp.each { s ->
+                supports.add(new Support(support_level:s, disaster_recovery_level:d).save())
+            }
+        }
+    }
+
+    def createApplications() {
+        applications.add(new Application(application_name:"EDT", application_description:"Engineering Design Tool", support_information:supports[3]).save())
+        applications.add(new Application(application_name:"GIMMS", application_description:"Really Bloated and Slow to Production Interface", support_information:supports[8]).save())
+        applications.add(new Application(application_name:"PetProject1", application_description:"Some Pet Project", support_information:supports[1]).save())
+        applications.add(new Application(application_name:"QueueChecker", application_description:"Queue Checker for JMS Queues", support_information:supports[4]).save())
+        applications.add(new Application(application_name:"Hudson", application_description:"EAI Continuous Integration System", support_information:supports[6]).save())
+        applications.add(new Application(application_name:"ECPD", application_description:"Electric Capital Project Database", support_information:supports[5]).save())
+        applications.add(new Application(application_name:"CRIS", application_description:"A less-than-useful set of tools for companies who create new generation...Unlike AE at the moment.", support_information:supports[0]).save())
+    }
+
+    def createEvents() {
+        events.add(new Event(event_name:"", event_type:"").save())
+    }
+
 } 

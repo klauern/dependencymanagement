@@ -31,7 +31,7 @@
                                     <label for="disaster_recovery_level">Disasterrecoverylevel:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:supportInstance,field:'disaster_recovery_level','errors')}">
-                                    <input type="text" id="disaster_recovery_level" name="disaster_recovery_level" value="${fieldValue(bean:supportInstance,field:'disaster_recovery_level')}" />
+                                    <g:select id="disaster_recovery_level" name="disaster_recovery_level" from="${supportInstance.constraints.disaster_recovery_level.inList}" value="${supportInstance.disaster_recovery_level}" ></g:select>
                                 </td>
                             </tr> 
                         

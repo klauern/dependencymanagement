@@ -53,7 +53,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Support.count()}" />
+                <g:paginate total="${supportInstanceTotal}" />
             </div>
         </div>
     </body>
