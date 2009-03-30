@@ -57,7 +57,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Domain.count()}" />
+                <g:paginate total="${domainInstanceTotal}" />
             </div>
         </div>
     </body>

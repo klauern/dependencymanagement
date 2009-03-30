@@ -9,7 +9,8 @@
  * be to pull out this type of information that we have housed somewhere else
  * (like the .csv file that we use for dependency management currently).
  *
- * Author: Nick Klauer
+ * Author
+: Nick Klauer
  */
 
 {
