@@ -29,7 +29,7 @@ class BootStrap {
         // Domains
         createDomains()
         def domain_a = new Domain(domain_name:"EmplInfo",domain_description:"A thing",
-            zone:zone_c).save()
+            zone:zones[2]).save()
         // Ports
         createPorts()
         // Integration
