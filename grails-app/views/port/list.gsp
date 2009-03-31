@@ -23,12 +23,8 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
                    	        <th>Domain</th>
                    	    
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
                    	        <g:sortableColumn property="port_number" title="Portnumber" />
                         
                    	        <g:sortableColumn property="port_use_description" title="Portusedescription" />
@@ -41,11 +37,7 @@
                         
                             <td><g:link action="show" id="${portInstance.id}">${fieldValue(bean:portInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:portInstance, field:'dateCreated')}</td>
-                        
                             <td>${fieldValue(bean:portInstance, field:'domain')}</td>
-                        
-                            <td>${fieldValue(bean:portInstance, field:'lastUpdated')}</td>
                         
                             <td>${fieldValue(bean:portInstance, field:'port_number')}</td>
                         
@@ -57,7 +49,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Port.count()}" />
+                <g:paginate total="${portInstanceTotal}" />
             </div>
         </div>
     </body>

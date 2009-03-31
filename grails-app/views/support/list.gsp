@@ -27,10 +27,6 @@
                         
                    	        <g:sortableColumn property="support_level" title="Supportlevel" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
                         </tr>
                     </thead>
                     <tbody>
@@ -43,17 +39,13 @@
                         
                             <td>${fieldValue(bean:supportInstance, field:'support_level')}</td>
                         
-                            <td>${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
-                        
-                            <td>${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
-                        
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Support.count()}" />
+                <g:paginate total="${supportInstanceTotal}" />
             </div>
         </div>
     </body>

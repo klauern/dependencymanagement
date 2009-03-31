@@ -1,13 +1,15 @@
+
+
 class IntDetailController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ intDetailInstanceList: IntDetail.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ intDetailInstanceList: IntDetail.list( params ), intDetailInstanceTotal: IntDetail.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class IntDetailController {
     def delete = {
         def intDetailInstance = IntDetail.get( params.id )
         if(intDetailInstance) {
-            intDetailInstance.delete()
-            flash.message = "IntDetail ${params.id} deleted"
-            redirect(action:list)
+            try {
+                intDetailInstance.delete()
+                flash.message = "IntDetail ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "IntDetail ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "IntDetail not found with id ${params.id}"
@@ -48,6 +56,15 @@ class IntDetailController {
     def update = {
         def intDetailInstance = IntDetail.get( params.id )
         if(intDetailInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(intDetailInstance.version > version) {
+                    
+                    intDetailInstance.errors.rejectValue("version", "intDetail.optimistic.locking.failure", "Another user has updated this IntDetail while you were editing.")
+                    render(view:'edit',model:[intDetailInstance:intDetailInstance])
+                    return
+                }
+            }
             intDetailInstance.properties = params
             if(!intDetailInstance.hasErrors() && intDetailInstance.save()) {
                 flash.message = "IntDetail ${params.id} updated"

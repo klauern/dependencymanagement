@@ -21,7 +21,7 @@
                     <thead>
                         <tr>
                         <%
-                            excludedProps = ['version',
+                            excludedProps = ['version', 'dateCreated', 'lastUpdated',
                                                Events.ONLOAD_EVENT,
                                                Events.BEFORE_DELETE_EVENT,
                                                Events.BEFORE_INSERT_EVENT,
@@ -53,7 +53,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="\${${className}.count()}" />
+                <g:paginate total="\${${propertyName}Total}" />
             </div>
         </div>
     </body>

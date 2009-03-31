@@ -1,13 +1,15 @@
+
+
 class SupportController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ supportInstanceList: Support.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ supportInstanceList: Support.list( params ), supportInstanceTotal: Support.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class SupportController {
     def delete = {
         def supportInstance = Support.get( params.id )
         if(supportInstance) {
-            supportInstance.delete()
-            flash.message = "Support ${params.id} deleted"
-            redirect(action:list)
+            try {
+                supportInstance.delete()
+                flash.message = "Support ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Support ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Support not found with id ${params.id}"
@@ -48,6 +56,15 @@ class SupportController {
     def update = {
         def supportInstance = Support.get( params.id )
         if(supportInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(supportInstance.version > version) {
+                    
+                    supportInstance.errors.rejectValue("version", "support.optimistic.locking.failure", "Another user has updated this Support while you were editing.")
+                    render(view:'edit',model:[supportInstance:supportInstance])
+                    return
+                }
+            }
             supportInstance.properties = params
             if(!supportInstance.hasErrors() && supportInstance.save()) {
                 flash.message = "Support ${params.id} updated"

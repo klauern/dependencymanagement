@@ -27,10 +27,6 @@
                         
                    	        <g:sortableColumn property="application_name" title="Applicationname" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
                    	        <th>Supportinformation</th>
                    	    
                         </tr>
@@ -45,10 +41,6 @@
                         
                             <td>${fieldValue(bean:applicationInstance, field:'application_name')}</td>
                         
-                            <td>${fieldValue(bean:applicationInstance, field:'dateCreated')}</td>
-                        
-                            <td>${fieldValue(bean:applicationInstance, field:'lastUpdated')}</td>
-                        
                             <td>${fieldValue(bean:applicationInstance, field:'support_information')}</td>
                         
                         </tr>
@@ -57,7 +49,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Application.count()}" />
+                <g:paginate total="${applicationInstanceTotal}" />
             </div>
         </div>
     </body>

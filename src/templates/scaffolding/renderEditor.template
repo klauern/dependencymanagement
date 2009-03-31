@@ -24,7 +24,9 @@
         out << renderByteArrayEditor(domainClass,property)                
     else if(property.manyToOne || property.oneToOne)
         out << renderManyToOne(domainClass,property)
-    else if(property.oneToMany || property.manyToMany)
+    else if((property.oneToMany && !property.bidirectional) || (property.manyToMany && property.isOwningSide()))
+        out << renderManyToMany(domainClass, property)
+    else if(property.oneToMany)
         out << renderOneToMany(domainClass,property)
 
     private renderEnumEditor(domainClass,property) {
@@ -65,9 +67,21 @@
     }
 
     private renderManyToOne(domainClass,property) {
-        if(property.association) {            
+        if(property.association) {
             return "<g:select optionKey=\"id\" from=\"\${${property.type.name}.list()}\" name=\"${property.name}.id\" value=\"\${${domainInstance}?.${property.name}?.id}\" ${renderNoSelection(property)}></g:select>"
         }
+    }
+
+    private renderManyToMany(domainClass,property) {
+        def sw = new StringWriter()
+        def pw = new PrintWriter(sw)
+
+        pw.println "<g:select name=\"${property.name}\""
+        pw.println "from=\"\${${property.referencedDomainClass.fullName}.list()}\""
+        pw.println "size=\"5\" multiple=\"yes\" optionKey=\"id\""
+        pw.println "value=\"\${${domainInstance}?.${property.name}}\" />"
+
+        return sw.toString()         
     }
 
     private renderOneToMany(domainClass,property) {
@@ -96,6 +110,12 @@
             if(cp.range) {
                 return "<g:select from=\"\${${cp.range.from}..${cp.range.to}}\" id=\"${property.name}\" name=\"${property.name}\" value=\"\${${domainInstance}?.${property.name}}\" ${renderNoSelection(property)}></g:select>"
             }
+            else if(cp.inList) {
+                def sb = new StringBuffer('<g:select ')
+                sb << "id=\"${property.name}\" name=\"${property.name}\" from=\"\${${domainClass.propertyName}.constraints.${property.name}.inList}\" value=\"\${${domainClass.propertyName}.${property?.name}}\" ${renderNoSelection(property)}>"
+                sb << '</g:select>'
+                return sb.toString()
+            }            
             else {
                 return "<input type=\"text\" id=\"${property.name}\" name=\"${property.name}\" value=\"\${fieldValue(bean:${domainInstance},field:'${property.name}')}\" />"
             }

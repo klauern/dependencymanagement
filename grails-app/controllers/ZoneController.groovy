@@ -1,13 +1,15 @@
+
+
 class ZoneController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ zoneInstanceList: Zone.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ zoneInstanceList: Zone.list( params ), zoneInstanceTotal: Zone.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class ZoneController {
     def delete = {
         def zoneInstance = Zone.get( params.id )
         if(zoneInstance) {
-            zoneInstance.delete()
-            flash.message = "Zone ${params.id} deleted"
-            redirect(action:list)
+            try {
+                zoneInstance.delete()
+                flash.message = "Zone ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Zone ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Zone not found with id ${params.id}"
@@ -48,6 +56,15 @@ class ZoneController {
     def update = {
         def zoneInstance = Zone.get( params.id )
         if(zoneInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(zoneInstance.version > version) {
+                    
+                    zoneInstance.errors.rejectValue("version", "zone.optimistic.locking.failure", "Another user has updated this Zone while you were editing.")
+                    render(view:'edit',model:[zoneInstance:zoneInstance])
+                    return
+                }
+            }
             zoneInstance.properties = params
             if(!zoneInstance.hasErrors() && zoneInstance.save()) {
                 flash.message = "Zone ${params.id} updated"

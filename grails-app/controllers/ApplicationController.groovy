@@ -1,13 +1,15 @@
+
+
 class ApplicationController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ applicationInstanceList: Application.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ applicationInstanceList: Application.list( params ), applicationInstanceTotal: Application.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class ApplicationController {
     def delete = {
         def applicationInstance = Application.get( params.id )
         if(applicationInstance) {
-            applicationInstance.delete()
-            flash.message = "Application ${params.id} deleted"
-            redirect(action:list)
+            try {
+                applicationInstance.delete()
+                flash.message = "Application ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Application ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Application not found with id ${params.id}"
@@ -48,6 +56,15 @@ class ApplicationController {
     def update = {
         def applicationInstance = Application.get( params.id )
         if(applicationInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(applicationInstance.version > version) {
+                    
+                    applicationInstance.errors.rejectValue("version", "application.optimistic.locking.failure", "Another user has updated this Application while you were editing.")
+                    render(view:'edit',model:[applicationInstance:applicationInstance])
+                    return
+                }
+            }
             applicationInstance.properties = params
             if(!applicationInstance.hasErrors() && applicationInstance.save()) {
                 flash.message = "Application ${params.id} updated"

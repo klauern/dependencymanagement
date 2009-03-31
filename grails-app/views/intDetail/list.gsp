@@ -29,9 +29,9 @@
                    	    
                    	        <g:sortableColumn property="connection_name" title="Connectionname" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
                    	        <g:sortableColumn property="description" title="Description" />
+                        
+                   	        <g:sortableColumn property="username" title="Username" />
                         
                         </tr>
                     </thead>
@@ -47,9 +47,9 @@
                         
                             <td>${fieldValue(bean:intDetailInstance, field:'connection_name')}</td>
                         
-                            <td>${fieldValue(bean:intDetailInstance, field:'dateCreated')}</td>
-                        
                             <td>${fieldValue(bean:intDetailInstance, field:'description')}</td>
+                        
+                            <td>${fieldValue(bean:intDetailInstance, field:'username')}</td>
                         
                         </tr>
                     </g:each>
@@ -57,7 +57,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${IntDetail.count()}" />
+                <g:paginate total="${intDetailInstanceTotal}" />
             </div>
         </div>
     </body>

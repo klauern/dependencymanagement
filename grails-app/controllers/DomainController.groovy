@@ -1,13 +1,15 @@
+
+
 class DomainController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ domainInstanceList: Domain.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ domainInstanceList: Domain.list( params ), domainInstanceTotal: Domain.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class DomainController {
     def delete = {
         def domainInstance = Domain.get( params.id )
         if(domainInstance) {
-            domainInstance.delete()
-            flash.message = "Domain ${params.id} deleted"
-            redirect(action:list)
+            try {
+                domainInstance.delete()
+                flash.message = "Domain ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Domain ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Domain not found with id ${params.id}"
@@ -48,6 +56,15 @@ class DomainController {
     def update = {
         def domainInstance = Domain.get( params.id )
         if(domainInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(domainInstance.version > version) {
+                    
+                    domainInstance.errors.rejectValue("version", "domain.optimistic.locking.failure", "Another user has updated this Domain while you were editing.")
+                    render(view:'edit',model:[domainInstance:domainInstance])
+                    return
+                }
+            }
             domainInstance.properties = params
             if(!domainInstance.hasErrors() && domainInstance.save()) {
                 flash.message = "Domain ${params.id} updated"
