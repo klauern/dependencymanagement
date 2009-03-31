@@ -27,11 +27,9 @@
                         
                    	        <g:sortableColumn property="work_phone" title="Workphone" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
                    	        <g:sortableColumn property="full_name" title="Fullname" />
                         
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
+                   	        <g:sortableColumn property="mobile_phone" title="Mobilephone" />
                         
                         </tr>
                     </thead>
@@ -45,11 +43,9 @@
                         
                             <td>${fieldValue(bean:contactInstance, field:'work_phone')}</td>
                         
-                            <td>${fieldValue(bean:contactInstance, field:'dateCreated')}</td>
-                        
                             <td>${fieldValue(bean:contactInstance, field:'full_name')}</td>
                         
-                            <td>${fieldValue(bean:contactInstance, field:'lastUpdated')}</td>
+                            <td>${fieldValue(bean:contactInstance, field:'mobile_phone')}</td>
                         
                         </tr>
                     </g:each>
@@ -57,7 +53,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Contact.count()}" />
+                <g:paginate total="${contactInstanceTotal}" />
             </div>
         </div>
     </body>

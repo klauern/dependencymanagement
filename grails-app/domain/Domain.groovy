@@ -11,4 +11,8 @@ class Domain {
         }
     }
     static hasMany = [ports:Port]
+
+    def String toString() {
+        return "${zone.zone_name}: ${domain_name}"
+    }
 }

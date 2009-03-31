@@ -1,13 +1,15 @@
+
+
 class PortController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ portInstanceList: Port.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ portInstanceList: Port.list( params ), portInstanceTotal: Port.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class PortController {
     def delete = {
         def portInstance = Port.get( params.id )
         if(portInstance) {
-            portInstance.delete()
-            flash.message = "Port ${params.id} deleted"
-            redirect(action:list)
+            try {
+                portInstance.delete()
+                flash.message = "Port ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Port ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Port not found with id ${params.id}"
@@ -48,6 +56,15 @@ class PortController {
     def update = {
         def portInstance = Port.get( params.id )
         if(portInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(portInstance.version > version) {
+                    
+                    portInstance.errors.rejectValue("version", "port.optimistic.locking.failure", "Another user has updated this Port while you were editing.")
+                    render(view:'edit',model:[portInstance:portInstance])
+                    return
+                }
+            }
             portInstance.properties = params
             if(!portInstance.hasErrors() && portInstance.save()) {
                 flash.message = "Port ${params.id} updated"

@@ -1,13 +1,15 @@
+
+
 class IntegrationController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ integrationInstanceList: Integration.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ integrationInstanceList: Integration.list( params ), integrationInstanceTotal: Integration.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class IntegrationController {
     def delete = {
         def integrationInstance = Integration.get( params.id )
         if(integrationInstance) {
-            integrationInstance.delete()
-            flash.message = "Integration ${params.id} deleted"
-            redirect(action:list)
+            try {
+                integrationInstance.delete()
+                flash.message = "Integration ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Integration ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Integration not found with id ${params.id}"
@@ -48,6 +56,15 @@ class IntegrationController {
     def update = {
         def integrationInstance = Integration.get( params.id )
         if(integrationInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(integrationInstance.version > version) {
+                    
+                    integrationInstance.errors.rejectValue("version", "integration.optimistic.locking.failure", "Another user has updated this Integration while you were editing.")
+                    render(view:'edit',model:[integrationInstance:integrationInstance])
+                    return
+                }
+            }
             integrationInstance.properties = params
             if(!integrationInstance.hasErrors() && integrationInstance.save()) {
                 flash.message = "Integration ${params.id} updated"

@@ -21,7 +21,7 @@
                     <thead>
                         <tr>
                         <%
-                            excludedProps = ['version',
+                            excludedProps = ['version', 'dateCreated', 'lastUpdated',
                                                Events.ONLOAD_EVENT,
                                                Events.BEFORE_DELETE_EVENT,
                                                Events.BEFORE_INSERT_EVENT,
