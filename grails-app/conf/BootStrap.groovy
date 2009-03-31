@@ -9,7 +9,8 @@ class BootStrap {
     def zones = []
     def domains = []
     def ports = []
-
+    def integrations = []
+    def intdetails = []
 
     def init = { servletContext ->
 
@@ -28,20 +29,19 @@ class BootStrap {
 
         // Domains
         createDomains()
-        def domain_a = new Domain(domain_name:"EmplInfo",domain_description:"A thing",
-            zone:zones[2]).save()
         // Ports
         createPorts()
         // Integration
+        createIntegrations()
         // IntDetail
-
+        createIntDetails()
 
 
         def jsonArray = JSON.parse(new File("./docs/SomeBootStrapInfo.json").getText())
-
-
     }
 
+    def destroy = {
+    }
 
     def createContacts() {
         def contact_a = new Contact(full_name:"Meg Sviatslovsky",email:"megsviatslovsky@alliantenergy.com",
@@ -54,21 +54,17 @@ class BootStrap {
     }
     
     def createZones() {
-        def zone_a = new Zone(zone_name:"eaiprodpart1",zone_type:"JCAPS 5.1.x",
-            zone_usage:"JCAPS 5.1.3 Logical host server.  Production").save()
-        def zone_b = new Zone(zone_name:"eaitestpart5",zone_type:"JCAPS 5.1.x",
-            zone_usage:"Test Environment for\n\n blah blah blah and some other stuff").save()
-        def zone_c = new Zone(zone_name:"sreprodpart1",zone_type:"SRE 5.0.5",
-            zone_usage:"SRE EmplInfo Schema").save()
-        
+        zones.add(new Zone(zone_name:"eaiprodpart1",zone_type:"JCAPS 5.1.x",
+                zone_usage:"JCAPS 5.1.3 Logical host server.  Production").save())
+        zones.add(new Zone(zone_name:"eaitestpart5",zone_type:"JCAPS 5.1.x",
+                zone_usage:"Test Environment for\n\n blah blah blah and some other stuff").save())
+        zones.add(new Zone(zone_name:"sreprodpart1",zone_type:"SRE 5.0.5",
+                zone_usage:"SRE EmplInfo Schema").save())
+        zones.add(new Zone(zone_name:"eaitestpart9", zone_type:"JCAPS 5.1.x",
+                zone_usage:"AMI Test").save())
+       
     }
 
-    def loadJsonInfo(servletContext) {
-
-    }
-
-    def destroy = {
-    }
 
     def createSupportAry() {
         def dr = ['1', '2', '3']
@@ -101,13 +97,25 @@ class BootStrap {
     }
 
     def createDomains() {
+        domains.add(new Domain(domain_name:"EmplInfo",domain_description:"A thing",
+                zone:zones[2]).save())
+        domains.add(new Domain(domain_name:"AMI", domain_description:"Big honkin' thing", zone:zones[3]).save())
 
     }
 
     def createPorts() {
+        ports.add(new Port(domain:domains[1], port_number:18000, port_use_description:"Base Port for Domain 1").save())
+        ports.add(new Port(domain:domains[1], port_number:18999, port_use_description:"JMX Connectivity for Domain 1").save())
+        ports.add(new Port(domain:domains[1], port_number:18001, port_use_description:"JMS transmission").save())
+        ports.add(new Port(domain:domains[0], port_number:18000, port_use_description:"Base JMS port for Domain 1").save())
+        ports.add(new Port(domain:domains[0], port_number:19000, port_use_description:"Base JMS port for Domain 2").save())
+    }
+
+    def createIntegrations() {
 
     }
 
+    def createIntDetails() {
 
-
+    }
 } 

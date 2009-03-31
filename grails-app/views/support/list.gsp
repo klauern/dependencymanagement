@@ -27,10 +27,6 @@
                         
                    	        <g:sortableColumn property="support_level" title="Supportlevel" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
-                        
                         </tr>
                     </thead>
                     <tbody>
@@ -42,10 +38,6 @@
                             <td>${fieldValue(bean:supportInstance, field:'disaster_recovery_level')}</td>
                         
                             <td>${fieldValue(bean:supportInstance, field:'support_level')}</td>
-                        
-                            <td>${fieldValue(bean:supportInstance, field:'dateCreated')}</td>
-                        
-                            <td>${fieldValue(bean:supportInstance, field:'lastUpdated')}</td>
                         
                         </tr>
                     </g:each>

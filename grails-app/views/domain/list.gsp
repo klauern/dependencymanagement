@@ -23,13 +23,9 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
                    	        <g:sortableColumn property="domain_description" title="Domaindescription" />
                         
                    	        <g:sortableColumn property="domain_name" title="Domainname" />
-                        
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
                         
                    	        <th>Zone</th>
                    	    
@@ -41,13 +37,9 @@
                         
                             <td><g:link action="show" id="${domainInstance.id}">${fieldValue(bean:domainInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:domainInstance, field:'dateCreated')}</td>
-                        
                             <td>${fieldValue(bean:domainInstance, field:'domain_description')}</td>
                         
                             <td>${fieldValue(bean:domainInstance, field:'domain_name')}</td>
-                        
-                            <td>${fieldValue(bean:domainInstance, field:'lastUpdated')}</td>
                         
                             <td>${fieldValue(bean:domainInstance, field:'zone')}</td>
                         

@@ -1,13 +1,15 @@
+
+
 class ContactController {
     
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only accept POST requests
-    static def allowedMethods = [delete:'POST', save:'POST', update:'POST']
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        if(!params.max) params.max = 10
-        [ contactInstanceList: Contact.list( params ) ]
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ contactInstanceList: Contact.list( params ), contactInstanceTotal: Contact.count() ]
     }
 
     def show = {
@@ -23,9 +25,15 @@ class ContactController {
     def delete = {
         def contactInstance = Contact.get( params.id )
         if(contactInstance) {
-            contactInstance.delete()
-            flash.message = "Contact ${params.id} deleted"
-            redirect(action:list)
+            try {
+                contactInstance.delete()
+                flash.message = "Contact ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Contact ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
         }
         else {
             flash.message = "Contact not found with id ${params.id}"
@@ -48,6 +56,15 @@ class ContactController {
     def update = {
         def contactInstance = Contact.get( params.id )
         if(contactInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(contactInstance.version > version) {
+                    
+                    contactInstance.errors.rejectValue("version", "contact.optimistic.locking.failure", "Another user has updated this Contact while you were editing.")
+                    render(view:'edit',model:[contactInstance:contactInstance])
+                    return
+                }
+            }
             contactInstance.properties = params
             if(!contactInstance.hasErrors() && contactInstance.save()) {
                 flash.message = "Contact ${params.id} updated"

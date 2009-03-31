@@ -23,13 +23,9 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
-                        
                    	        <g:sortableColumn property="event_name" title="Eventname" />
                         
                    	        <g:sortableColumn property="event_type" title="Eventtype" />
-                        
-                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
                         
                         </tr>
                     </thead>
@@ -39,13 +35,9 @@
                         
                             <td><g:link action="show" id="${eventInstance.id}">${fieldValue(bean:eventInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:eventInstance, field:'dateCreated')}</td>
-                        
                             <td>${fieldValue(bean:eventInstance, field:'event_name')}</td>
                         
                             <td>${fieldValue(bean:eventInstance, field:'event_type')}</td>
-                        
-                            <td>${fieldValue(bean:eventInstance, field:'lastUpdated')}</td>
                         
                         </tr>
                     </g:each>
@@ -53,7 +45,7 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <g:paginate total="${Event.count()}" />
+                <g:paginate total="${eventInstanceTotal}" />
             </div>
         </div>
     </body>
